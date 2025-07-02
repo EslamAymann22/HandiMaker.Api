@@ -1,0 +1,15 @@
+C:\Users\hhhh\Desktop\HandiMaker.Api\HandiMaker.Infrastructure\bin\Debug\net8.0\HandiMaker.Infrastructure.deps.json
+C:\Users\hhhh\Desktop\HandiMaker.Api\HandiMaker.Infrastructure\bin\Debug\net8.0\HandiMaker.Infrastructure.dll
+C:\Users\hhhh\Desktop\HandiMaker.Api\HandiMaker.Infrastructure\bin\Debug\net8.0\HandiMaker.Infrastructure.pdb
+C:\Users\hhhh\Desktop\HandiMaker.Api\HandiMaker.Infrastructure\bin\Debug\net8.0\HandiMaker.Data.dll
+C:\Users\hhhh\Desktop\HandiMaker.Api\HandiMaker.Infrastructure\bin\Debug\net8.0\HandiMaker.Data.pdb
+C:\Users\hhhh\Desktop\HandiMaker.Api\HandiMaker.Infrastructure\obj\Debug\net8.0\HandiMaker.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\hhhh\Desktop\HandiMaker.Api\HandiMaker.Infrastructure\obj\Debug\net8.0\HandiMaker.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hhhh\Desktop\HandiMaker.Api\HandiMaker.Infrastructure\obj\Debug\net8.0\HandiMaker.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\hhhh\Desktop\HandiMaker.Api\HandiMaker.Infrastructure\obj\Debug\net8.0\HandiMaker.Infrastructure.AssemblyInfo.cs
+C:\Users\hhhh\Desktop\HandiMaker.Api\HandiMaker.Infrastructure\obj\Debug\net8.0\HandiMaker.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\hhhh\Desktop\HandiMaker.Api\HandiMaker.Infrastructure\obj\Debug\net8.0\HandiMak.160286EA.Up2Date
+C:\Users\hhhh\Desktop\HandiMaker.Api\HandiMaker.Infrastructure\obj\Debug\net8.0\HandiMaker.Infrastructure.dll
+C:\Users\hhhh\Desktop\HandiMaker.Api\HandiMaker.Infrastructure\obj\Debug\net8.0\refint\HandiMaker.Infrastructure.dll
+C:\Users\hhhh\Desktop\HandiMaker.Api\HandiMaker.Infrastructure\obj\Debug\net8.0\HandiMaker.Infrastructure.pdb
+C:\Users\hhhh\Desktop\HandiMaker.Api\HandiMaker.Infrastructure\obj\Debug\net8.0\ref\HandiMaker.Infrastructure.dll

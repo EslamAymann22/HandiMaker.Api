@@ -1,0 +1,17 @@
+C:\Users\hhhh\Desktop\HandiMaker.Api\HandiMaker.Services\bin\Debug\net8.0\HandiMaker.Services.deps.json
+C:\Users\hhhh\Desktop\HandiMaker.Api\HandiMaker.Services\bin\Debug\net8.0\HandiMaker.Services.dll
+C:\Users\hhhh\Desktop\HandiMaker.Api\HandiMaker.Services\bin\Debug\net8.0\HandiMaker.Services.pdb
+C:\Users\hhhh\Desktop\HandiMaker.Api\HandiMaker.Services\bin\Debug\net8.0\HandiMaker.Data.dll
+C:\Users\hhhh\Desktop\HandiMaker.Api\HandiMaker.Services\bin\Debug\net8.0\HandiMaker.Infrastructure.dll
+C:\Users\hhhh\Desktop\HandiMaker.Api\HandiMaker.Services\bin\Debug\net8.0\HandiMaker.Data.pdb
+C:\Users\hhhh\Desktop\HandiMaker.Api\HandiMaker.Services\bin\Debug\net8.0\HandiMaker.Infrastructure.pdb
+C:\Users\hhhh\Desktop\HandiMaker.Api\HandiMaker.Services\obj\Debug\net8.0\HandiMaker.Services.csproj.AssemblyReference.cache
+C:\Users\hhhh\Desktop\HandiMaker.Api\HandiMaker.Services\obj\Debug\net8.0\HandiMaker.Services.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hhhh\Desktop\HandiMaker.Api\HandiMaker.Services\obj\Debug\net8.0\HandiMaker.Services.AssemblyInfoInputs.cache
+C:\Users\hhhh\Desktop\HandiMaker.Api\HandiMaker.Services\obj\Debug\net8.0\HandiMaker.Services.AssemblyInfo.cs
+C:\Users\hhhh\Desktop\HandiMaker.Api\HandiMaker.Services\obj\Debug\net8.0\HandiMaker.Services.csproj.CoreCompileInputs.cache
+C:\Users\hhhh\Desktop\HandiMaker.Api\HandiMaker.Services\obj\Debug\net8.0\HandiMak.C3A39CAB.Up2Date
+C:\Users\hhhh\Desktop\HandiMaker.Api\HandiMaker.Services\obj\Debug\net8.0\HandiMaker.Services.dll
+C:\Users\hhhh\Desktop\HandiMaker.Api\HandiMaker.Services\obj\Debug\net8.0\refint\HandiMaker.Services.dll
+C:\Users\hhhh\Desktop\HandiMaker.Api\HandiMaker.Services\obj\Debug\net8.0\HandiMaker.Services.pdb
+C:\Users\hhhh\Desktop\HandiMaker.Api\HandiMaker.Services\obj\Debug\net8.0\ref\HandiMaker.Services.dll
