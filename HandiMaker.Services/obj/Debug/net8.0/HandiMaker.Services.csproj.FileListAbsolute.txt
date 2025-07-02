@@ -15,3 +15,4 @@ C:\Users\hhhh\Desktop\HandiMaker.Api\HandiMaker.Services\obj\Debug\net8.0\HandiM
 C:\Users\hhhh\Desktop\HandiMaker.Api\HandiMaker.Services\obj\Debug\net8.0\refint\HandiMaker.Services.dll
 C:\Users\hhhh\Desktop\HandiMaker.Api\HandiMaker.Services\obj\Debug\net8.0\HandiMaker.Services.pdb
 C:\Users\hhhh\Desktop\HandiMaker.Api\HandiMaker.Services\obj\Debug\net8.0\ref\HandiMaker.Services.dll
+C:\Users\hhhh\Desktop\HandiMaker.Api\HandiMaker.Services\obj\Debug\net8.0\HandiMaker.Services.sourcelink.json

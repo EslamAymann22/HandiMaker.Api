@@ -17,3 +17,4 @@ C:\Users\hhhh\Desktop\HandiMaker.Api\HandiMaker.Core\obj\Debug\net8.0\HandiMaker
 C:\Users\hhhh\Desktop\HandiMaker.Api\HandiMaker.Core\obj\Debug\net8.0\refint\HandiMaker.Core.dll
 C:\Users\hhhh\Desktop\HandiMaker.Api\HandiMaker.Core\obj\Debug\net8.0\HandiMaker.Core.pdb
 C:\Users\hhhh\Desktop\HandiMaker.Api\HandiMaker.Core\obj\Debug\net8.0\ref\HandiMaker.Core.dll
+C:\Users\hhhh\Desktop\HandiMaker.Api\HandiMaker.Core\obj\Debug\net8.0\HandiMaker.Core.sourcelink.json

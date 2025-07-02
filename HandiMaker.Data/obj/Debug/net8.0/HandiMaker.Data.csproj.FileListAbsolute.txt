@@ -10,3 +10,4 @@ C:\Users\hhhh\Desktop\HandiMaker.Api\HandiMaker.Data\obj\Debug\net8.0\HandiMaker
 C:\Users\hhhh\Desktop\HandiMaker.Api\HandiMaker.Data\obj\Debug\net8.0\refint\HandiMaker.Data.dll
 C:\Users\hhhh\Desktop\HandiMaker.Api\HandiMaker.Data\obj\Debug\net8.0\HandiMaker.Data.pdb
 C:\Users\hhhh\Desktop\HandiMaker.Api\HandiMaker.Data\obj\Debug\net8.0\ref\HandiMaker.Data.dll
+C:\Users\hhhh\Desktop\HandiMaker.Api\HandiMaker.Data\obj\Debug\net8.0\HandiMaker.Data.sourcelink.json

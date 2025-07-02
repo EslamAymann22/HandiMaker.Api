@@ -13,3 +13,4 @@ C:\Users\hhhh\Desktop\HandiMaker.Api\HandiMaker.Infrastructure\obj\Debug\net8.0\
 C:\Users\hhhh\Desktop\HandiMaker.Api\HandiMaker.Infrastructure\obj\Debug\net8.0\refint\HandiMaker.Infrastructure.dll
 C:\Users\hhhh\Desktop\HandiMaker.Api\HandiMaker.Infrastructure\obj\Debug\net8.0\HandiMaker.Infrastructure.pdb
 C:\Users\hhhh\Desktop\HandiMaker.Api\HandiMaker.Infrastructure\obj\Debug\net8.0\ref\HandiMaker.Infrastructure.dll
+C:\Users\hhhh\Desktop\HandiMaker.Api\HandiMaker.Infrastructure\obj\Debug\net8.0\HandiMaker.Infrastructure.sourcelink.json
