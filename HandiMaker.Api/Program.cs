@@ -1,6 +1,9 @@
 
+using Fas7niApp.Infrastructure;
+using HandiMaker.Core;
 using HandiMaker.Data.Entities;
 using HandiMaker.Infrastructure.DbContextData;
+using HandiMaker.Service;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
@@ -28,6 +31,12 @@ namespace HandiMaker.Api
             builder.Services.AddIdentity<AppUser, IdentityRole>()
                 .AddEntityFrameworkStores<HandiMakerDbContext>()
                 .AddDefaultTokenProviders();
+
+            builder.Services.AddInfrastructureDependencies()
+                .AddCoreDependencies()
+                .AddServicesDependencies()
+                .AddJWTTokenConfigurations(builder.Configuration);
+
 
             var app = builder.Build();
 

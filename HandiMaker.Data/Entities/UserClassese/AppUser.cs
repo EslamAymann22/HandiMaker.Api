@@ -12,6 +12,7 @@ namespace HandiMaker.Data.Entities
         public string? FirstName { get; set; }
         public string? LastName { get; set; }
         public DateOnly? BOD { get; set; }
+        public UserRole Role { get; set; }
         public string? Location { get; set; }
         public string? PictureUrl { get; set; }
         public UserGender? Gender { get; set; }

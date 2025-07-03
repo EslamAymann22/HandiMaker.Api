@@ -7,6 +7,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="MailKit" Version="4.13.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.17" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\HandiMaker.Data\HandiMaker.Data.csproj" />
     <ProjectReference Include="..\HandiMaker.Infrastructure\HandiMaker.Infrastructure.csproj" />
   </ItemGroup>
