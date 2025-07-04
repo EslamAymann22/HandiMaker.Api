@@ -8,16 +8,16 @@ namespace HandiMaker.Infrastructure.Config
     {
         public void Configure(EntityTypeBuilder<UserFollow> builder)
         {
-            builder.HasKey(UF => new { UF.FollowingId, UF.FollowerId });
+            builder.HasKey(UF => new { UF.FollowedId, UF.FollowerId });
 
             builder.HasOne(uf => uf.Follower)
                    .WithMany(u => u.Following)
                    .HasForeignKey(uf => uf.FollowerId)
                    .OnDelete(DeleteBehavior.Restrict);
 
-            builder.HasOne(uf => uf.Following)
+            builder.HasOne(uf => uf.Followed)
                    .WithMany(u => u.Followers)
-                   .HasForeignKey(uf => uf.FollowingId)
+                   .HasForeignKey(uf => uf.FollowedId)
                    .OnDelete(DeleteBehavior.Restrict);
 
         }

@@ -6,7 +6,7 @@ using MediatR;
 using Microsoft.AspNetCore.Identity;
 using System.Net;
 
-namespace HandiMaker.Core.Feature.Account
+namespace HandiMaker.Core.Feature.Account.Command
 {
     public class RegisterDto
     {
@@ -31,11 +31,15 @@ namespace HandiMaker.Core.Feature.Account
 
         public RegisterHandler(UserManager<AppUser> userManager, IAuthenticationServices authenticationServices)
         {
-            this._userManager = userManager;
-            this._authenticationServices = authenticationServices;
+            _userManager = userManager;
+            _authenticationServices = authenticationServices;
         }
         public async Task<BaseResponse<RegisterDto>> Handle(RegisterModel request, CancellationToken cancellationToken)
         {
+
+            if (request.Password != request.ConfirmPassword)
+                return Failed<RegisterDto>(HttpStatusCode.BadRequest, "Password Not Match with ConfirmPassword");
+
             var user = await _userManager.FindByEmailAsync(request.Email);
             if (user is not null)
                 return Failed<RegisterDto>(HttpStatusCode.Conflict, "This Email is used before!");
@@ -50,6 +54,7 @@ namespace HandiMaker.Core.Feature.Account
             user = new()
             {
                 UserName = request.UserName,
+                FirstName = request.UserName,
                 Email = request.Email,
                 Role = request.Role
             };

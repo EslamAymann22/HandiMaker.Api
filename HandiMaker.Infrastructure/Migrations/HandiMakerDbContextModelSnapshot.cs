@@ -112,6 +112,9 @@ namespace HandiMaker.Infrastructure.Migrations
                     b.Property<string>("PictureUrl")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("Role")
+                        .HasColumnType("int");
+
                     b.Property<string>("SecurityStamp")
                         .HasColumnType("nvarchar(max)");
 
@@ -121,9 +124,6 @@ namespace HandiMaker.Infrastructure.Migrations
                     b.Property<string>("UserName")
                         .HasMaxLength(256)
                         .HasColumnType("nvarchar(256)");
-
-                    b.Property<int>("UserRole")
-                        .HasColumnType("int");
 
                     b.HasKey("Id");
 
@@ -170,7 +170,7 @@ namespace HandiMaker.Infrastructure.Migrations
 
                     b.HasIndex("PostId");
 
-                    b.ToTable("Comment");
+                    b.ToTable("Comments");
                 });
 
             modelBuilder.Entity("HandiMaker.Data.Entities.Message", b =>
@@ -205,7 +205,7 @@ namespace HandiMaker.Infrastructure.Migrations
 
                     b.HasIndex("SenderId");
 
-                    b.ToTable("Message");
+                    b.ToTable("Messages");
                 });
 
             modelBuilder.Entity("HandiMaker.Data.Entities.Notification", b =>
@@ -233,7 +233,7 @@ namespace HandiMaker.Infrastructure.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("Notification");
+                    b.ToTable("Notifications");
                 });
 
             modelBuilder.Entity("HandiMaker.Data.Entities.PostClasses.Post", b =>
@@ -254,7 +254,24 @@ namespace HandiMaker.Infrastructure.Migrations
 
                     b.HasIndex("PostOwnerId");
 
-                    b.ToTable("Post");
+                    b.ToTable("Posts");
+                });
+
+            modelBuilder.Entity("HandiMaker.Data.Entities.PostClasses.PostPicture", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("PicturUrl")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("PostsPictures");
                 });
 
             modelBuilder.Entity("HandiMaker.Data.Entities.ProductClasses.Product", b =>
@@ -295,7 +312,7 @@ namespace HandiMaker.Infrastructure.Migrations
 
                     b.HasIndex("OwnerId");
 
-                    b.ToTable("Product");
+                    b.ToTable("Products");
                 });
 
             modelBuilder.Entity("HandiMaker.Data.Entities.ProductClasses.ProductColor", b =>
@@ -316,7 +333,7 @@ namespace HandiMaker.Infrastructure.Migrations
 
                     b.HasIndex("ProductId");
 
-                    b.ToTable("ProductColor");
+                    b.ToTable("ProductColors");
                 });
 
             modelBuilder.Entity("HandiMaker.Data.Entities.ProductClasses.ProductPicture", b =>
@@ -338,12 +355,12 @@ namespace HandiMaker.Infrastructure.Migrations
 
                     b.HasIndex("ProductId");
 
-                    b.ToTable("ProductPicture");
+                    b.ToTable("ProductPictures");
                 });
 
             modelBuilder.Entity("HandiMaker.Data.Entities.UserClassese.UserFollow", b =>
                 {
-                    b.Property<string>("FollowingId")
+                    b.Property<string>("FollowedId")
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("FollowerId")
@@ -352,11 +369,11 @@ namespace HandiMaker.Infrastructure.Migrations
                     b.Property<DateTime>("FollowedAt")
                         .HasColumnType("datetime2");
 
-                    b.HasKey("FollowingId", "FollowerId");
+                    b.HasKey("FollowedId", "FollowerId");
 
                     b.HasIndex("FollowerId");
 
-                    b.ToTable("UserFollow");
+                    b.ToTable("UserFollows");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
@@ -617,21 +634,21 @@ namespace HandiMaker.Infrastructure.Migrations
 
             modelBuilder.Entity("HandiMaker.Data.Entities.UserClassese.UserFollow", b =>
                 {
+                    b.HasOne("HandiMaker.Data.Entities.AppUser", "Followed")
+                        .WithMany("Followers")
+                        .HasForeignKey("FollowedId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
                     b.HasOne("HandiMaker.Data.Entities.AppUser", "Follower")
                         .WithMany("Following")
                         .HasForeignKey("FollowerId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
-                    b.HasOne("HandiMaker.Data.Entities.AppUser", "Following")
-                        .WithMany("Followers")
-                        .HasForeignKey("FollowingId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
+                    b.Navigation("Followed");
 
                     b.Navigation("Follower");
-
-                    b.Navigation("Following");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
