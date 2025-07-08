@@ -3,24 +3,40 @@
   "WorkspaceRootPath": "C:\\Users\\hhhh\\Desktop\\HandiMaker.Api\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{94A6A027-EE1A-4009-9FCA-538E9F505F0C}|HandiMaker.Services\\HandiMaker.Services.csproj|c:\\users\\hhhh\\desktop\\handimaker.api\\handimaker.services\\services\\helperstatic\\documentservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{94A6A027-EE1A-4009-9FCA-538E9F505F0C}|HandiMaker.Services\\HandiMaker.Services.csproj|solutionrelative:handimaker.services\\services\\helperstatic\\documentservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{94A6A027-EE1A-4009-9FCA-538E9F505F0C}|HandiMaker.Services\\HandiMaker.Services.csproj|c:\\users\\hhhh\\desktop\\handimaker.api\\handimaker.services\\services\\implement\\resetpasswordservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94A6A027-EE1A-4009-9FCA-538E9F505F0C}|HandiMaker.Services\\HandiMaker.Services.csproj|solutionrelative:handimaker.services\\services\\implement\\resetpasswordservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F8303718-5AC9-479D-8AB7-77688517D435}|HandiMaker.Core\\HandiMaker.Core.csproj|c:\\users\\hhhh\\desktop\\handimaker.api\\handimaker.core\\feature\\account\\command\\editaccount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F8303718-5AC9-479D-8AB7-77688517D435}|HandiMaker.Core\\HandiMaker.Core.csproj|solutionrelative:handimaker.core\\feature\\account\\command\\editaccount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{94A6A027-EE1A-4009-9FCA-538E9F505F0C}|HandiMaker.Services\\HandiMaker.Services.csproj|c:\\users\\hhhh\\desktop\\handimaker.api\\handimaker.services\\services\\interface\\iresetpasswordservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94A6A027-EE1A-4009-9FCA-538E9F505F0C}|HandiMaker.Services\\HandiMaker.Services.csproj|solutionrelative:handimaker.services\\services\\interface\\iresetpasswordservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F8303718-5AC9-479D-8AB7-77688517D435}|HandiMaker.Core\\HandiMaker.Core.csproj|c:\\users\\hhhh\\desktop\\handimaker.api\\handimaker.core\\feature\\account\\command\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F8303718-5AC9-479D-8AB7-77688517D435}|HandiMaker.Core\\HandiMaker.Core.csproj|solutionrelative:handimaker.core\\feature\\account\\command\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F8303718-5AC9-479D-8AB7-77688517D435}|HandiMaker.Core\\HandiMaker.Core.csproj|c:\\users\\hhhh\\desktop\\handimaker.api\\handimaker.core\\feature\\account\\command\\forgetpassword\\requestresetpass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F8303718-5AC9-479D-8AB7-77688517D435}|HandiMaker.Core\\HandiMaker.Core.csproj|solutionrelative:handimaker.core\\feature\\account\\command\\forgetpassword\\requestresetpass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94A6A027-EE1A-4009-9FCA-538E9F505F0C}|HandiMaker.Services\\HandiMaker.Services.csproj|c:\\users\\hhhh\\desktop\\handimaker.api\\handimaker.services\\services\\implement\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94A6A027-EE1A-4009-9FCA-538E9F505F0C}|HandiMaker.Services\\HandiMaker.Services.csproj|solutionrelative:handimaker.services\\services\\implement\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94A6A027-EE1A-4009-9FCA-538E9F505F0C}|HandiMaker.Services\\HandiMaker.Services.csproj|c:\\users\\hhhh\\desktop\\handimaker.api\\handimaker.services\\moduleservicesdependencies.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94A6A027-EE1A-4009-9FCA-538E9F505F0C}|HandiMaker.Services\\HandiMaker.Services.csproj|solutionrelative:handimaker.services\\moduleservicesdependencies.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{368ACCE2-564B-45FA-8962-7C0CCBFF2280}|HandiMaker.Api\\HandiMaker.Api.csproj|c:\\users\\hhhh\\desktop\\handimaker.api\\handimaker.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{368ACCE2-564B-45FA-8962-7C0CCBFF2280}|HandiMaker.Api\\HandiMaker.Api.csproj|solutionrelative:handimaker.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{368ACCE2-564B-45FA-8962-7C0CCBFF2280}|HandiMaker.Api\\HandiMaker.Api.csproj|c:\\users\\hhhh\\desktop\\handimaker.api\\handimaker.api\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{368ACCE2-564B-45FA-8962-7C0CCBFF2280}|HandiMaker.Api\\HandiMaker.Api.csproj|solutionrelative:handimaker.api\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F8303718-5AC9-479D-8AB7-77688517D435}|HandiMaker.Core\\HandiMaker.Core.csproj|c:\\users\\hhhh\\desktop\\handimaker.api\\handimaker.core\\feature\\account\\command\\registersecondstep.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F8303718-5AC9-479D-8AB7-77688517D435}|HandiMaker.Core\\HandiMaker.Core.csproj|solutionrelative:handimaker.core\\feature\\account\\command\\registersecondstep.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F8303718-5AC9-479D-8AB7-77688517D435}|HandiMaker.Core\\HandiMaker.Core.csproj|c:\\users\\hhhh\\desktop\\handimaker.api\\handimaker.core\\feature\\account\\command\\forgetpassword\\resetpassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F8303718-5AC9-479D-8AB7-77688517D435}|HandiMaker.Core\\HandiMaker.Core.csproj|solutionrelative:handimaker.core\\feature\\account\\command\\forgetpassword\\resetpassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F8303718-5AC9-479D-8AB7-77688517D435}|HandiMaker.Core\\HandiMaker.Core.csproj|c:\\users\\hhhh\\desktop\\handimaker.api\\handimaker.core\\feature\\account\\command\\forgetpassword\\checkotpcode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F8303718-5AC9-479D-8AB7-77688517D435}|HandiMaker.Core\\HandiMaker.Core.csproj|solutionrelative:handimaker.core\\feature\\account\\command\\forgetpassword\\checkotpcode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,8 +46,73 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 9,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "EmailService.cs",
+              "DocumentMoniker": "C:\\Users\\hhhh\\Desktop\\HandiMaker.Api\\HandiMaker.Services\\Services\\implement\\EmailService.cs",
+              "RelativeDocumentMoniker": "HandiMaker.Services\\Services\\implement\\EmailService.cs",
+              "ToolTip": "C:\\Users\\hhhh\\Desktop\\HandiMaker.Api\\HandiMaker.Services\\Services\\implement\\EmailService.cs",
+              "RelativeToolTip": "HandiMaker.Services\\Services\\implement\\EmailService.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-08T05:02:02.139Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\hhhh\\Desktop\\HandiMaker.Api\\HandiMaker.Api\\Program.cs",
+              "RelativeDocumentMoniker": "HandiMaker.Api\\Program.cs",
+              "ToolTip": "C:\\Users\\hhhh\\Desktop\\HandiMaker.Api\\HandiMaker.Api\\Program.cs",
+              "RelativeToolTip": "HandiMaker.Api\\Program.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAQwCUAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-08T04:58:13.219Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ModuleServicesDependencies.cs",
+              "DocumentMoniker": "C:\\Users\\hhhh\\Desktop\\HandiMaker.Api\\HandiMaker.Services\\ModuleServicesDependencies.cs",
+              "RelativeDocumentMoniker": "HandiMaker.Services\\ModuleServicesDependencies.cs",
+              "ToolTip": "C:\\Users\\hhhh\\Desktop\\HandiMaker.Api\\HandiMaker.Services\\ModuleServicesDependencies.cs",
+              "RelativeToolTip": "HandiMaker.Services\\ModuleServicesDependencies.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-08T04:57:23.451Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "RequestResetPass.cs",
+              "DocumentMoniker": "C:\\Users\\hhhh\\Desktop\\HandiMaker.Api\\HandiMaker.Core\\Feature\\Account\\Command\\ForgetPassword\\RequestResetPass.cs",
+              "RelativeDocumentMoniker": "HandiMaker.Core\\Feature\\Account\\Command\\ForgetPassword\\RequestResetPass.cs",
+              "ToolTip": "C:\\Users\\hhhh\\Desktop\\HandiMaker.Api\\HandiMaker.Core\\Feature\\Account\\Command\\ForgetPassword\\RequestResetPass.cs",
+              "RelativeToolTip": "HandiMaker.Core\\Feature\\Account\\Command\\ForgetPassword\\RequestResetPass.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAUwCcAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-08T04:55:22.329Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "C:\\Users\\hhhh\\Desktop\\HandiMaker.Api\\HandiMaker.Api\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "HandiMaker.Api\\Controllers\\AccountController.cs",
+              "ToolTip": "C:\\Users\\hhhh\\Desktop\\HandiMaker.Api\\HandiMaker.Api\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "HandiMaker.Api\\Controllers\\AccountController.cs",
+              "ViewState": "AgIAADsAAAAAAAAAAAAQwE8AAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-08T04:47:13.611Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
@@ -50,67 +131,54 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Login.cs",
-              "DocumentMoniker": "C:\\Users\\hhhh\\Desktop\\HandiMaker.Api\\HandiMaker.Core\\Feature\\Account\\Command\\Login.cs",
-              "RelativeDocumentMoniker": "HandiMaker.Core\\Feature\\Account\\Command\\Login.cs",
-              "ToolTip": "C:\\Users\\hhhh\\Desktop\\HandiMaker.Api\\HandiMaker.Core\\Feature\\Account\\Command\\Login.cs",
-              "RelativeToolTip": "HandiMaker.Core\\Feature\\Account\\Command\\Login.cs",
-              "ViewState": "AgIAACQAAAAAAAAAAAAQwDQAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-08T00:21:09.644Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AccountController.cs",
-              "DocumentMoniker": "C:\\Users\\hhhh\\Desktop\\HandiMaker.Api\\HandiMaker.Api\\Controllers\\AccountController.cs",
-              "RelativeDocumentMoniker": "HandiMaker.Api\\Controllers\\AccountController.cs",
-              "ToolTip": "C:\\Users\\hhhh\\Desktop\\HandiMaker.Api\\HandiMaker.Api\\Controllers\\AccountController.cs",
-              "RelativeToolTip": "HandiMaker.Api\\Controllers\\AccountController.cs",
-              "ViewState": "AgIAABkAAAAAAAAAAAAQwCwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-08T00:14:41.078Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "DocumentServices.cs",
-              "DocumentMoniker": "C:\\Users\\hhhh\\Desktop\\HandiMaker.Api\\HandiMaker.Services\\Services\\HelperStatic\\DocumentServices.cs",
-              "RelativeDocumentMoniker": "HandiMaker.Services\\Services\\HelperStatic\\DocumentServices.cs",
-              "ToolTip": "C:\\Users\\hhhh\\Desktop\\HandiMaker.Api\\HandiMaker.Services\\Services\\HelperStatic\\DocumentServices.cs",
-              "RelativeToolTip": "HandiMaker.Services\\Services\\HelperStatic\\DocumentServices.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAQwA8AAAAwAAAAAAAAAA==",
+              "Title": "ResetPasswordServices.cs",
+              "DocumentMoniker": "C:\\Users\\hhhh\\Desktop\\HandiMaker.Api\\HandiMaker.Services\\Services\\implement\\ResetPasswordServices.cs",
+              "RelativeDocumentMoniker": "HandiMaker.Services\\Services\\implement\\ResetPasswordServices.cs",
+              "ToolTip": "C:\\Users\\hhhh\\Desktop\\HandiMaker.Api\\HandiMaker.Services\\Services\\implement\\ResetPasswordServices.cs",
+              "RelativeToolTip": "HandiMaker.Services\\Services\\implement\\ResetPasswordServices.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAgwCIAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-07T23:58:47.151Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "RegisterSecondStep.cs",
-              "DocumentMoniker": "C:\\Users\\hhhh\\Desktop\\HandiMaker.Api\\HandiMaker.Core\\Feature\\Account\\Command\\RegisterSecondStep.cs",
-              "RelativeDocumentMoniker": "HandiMaker.Core\\Feature\\Account\\Command\\RegisterSecondStep.cs",
-              "ToolTip": "C:\\Users\\hhhh\\Desktop\\HandiMaker.Api\\HandiMaker.Core\\Feature\\Account\\Command\\RegisterSecondStep.cs",
-              "RelativeToolTip": "HandiMaker.Core\\Feature\\Account\\Command\\RegisterSecondStep.cs",
-              "ViewState": "AgIAACwAAAAAAAAAAAAAAD4AAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-07T23:32:22.791Z",
+              "WhenOpened": "2025-07-08T04:33:11.563Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "EditAccount.cs",
-              "DocumentMoniker": "C:\\Users\\hhhh\\Desktop\\HandiMaker.Api\\HandiMaker.Core\\Feature\\Account\\Command\\EditAccount.cs",
-              "RelativeDocumentMoniker": "HandiMaker.Core\\Feature\\Account\\Command\\EditAccount.cs",
-              "ToolTip": "C:\\Users\\hhhh\\Desktop\\HandiMaker.Api\\HandiMaker.Core\\Feature\\Account\\Command\\EditAccount.cs",
-              "RelativeToolTip": "HandiMaker.Core\\Feature\\Account\\Command\\EditAccount.cs",
-              "ViewState": "AgIAACMAAAAAAAAAAAAAADcAAAAQAAAAAAAAAA==",
+              "Title": "IResetPasswordServices.cs",
+              "DocumentMoniker": "C:\\Users\\hhhh\\Desktop\\HandiMaker.Api\\HandiMaker.Services\\Services\\Interface\\IResetPasswordServices.cs",
+              "RelativeDocumentMoniker": "HandiMaker.Services\\Services\\Interface\\IResetPasswordServices.cs",
+              "ToolTip": "C:\\Users\\hhhh\\Desktop\\HandiMaker.Api\\HandiMaker.Services\\Services\\Interface\\IResetPasswordServices.cs",
+              "RelativeToolTip": "HandiMaker.Services\\Services\\Interface\\IResetPasswordServices.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAAAAIAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-07T23:32:19.454Z",
+              "WhenOpened": "2025-07-08T04:36:12.535Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ResetPassword.cs",
+              "DocumentMoniker": "C:\\Users\\hhhh\\Desktop\\HandiMaker.Api\\HandiMaker.Core\\Feature\\Account\\Command\\ForgetPassword\\ResetPassword.cs",
+              "RelativeDocumentMoniker": "HandiMaker.Core\\Feature\\Account\\Command\\ForgetPassword\\ResetPassword.cs",
+              "ToolTip": "C:\\Users\\hhhh\\Desktop\\HandiMaker.Api\\HandiMaker.Core\\Feature\\Account\\Command\\ForgetPassword\\ResetPassword.cs",
+              "RelativeToolTip": "HandiMaker.Core\\Feature\\Account\\Command\\ForgetPassword\\ResetPassword.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAQwCwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-08T04:44:56.577Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "CheckOTPCode.cs",
+              "DocumentMoniker": "C:\\Users\\hhhh\\Desktop\\HandiMaker.Api\\HandiMaker.Core\\Feature\\Account\\Command\\ForgetPassword\\CheckOTPCode.cs",
+              "RelativeDocumentMoniker": "HandiMaker.Core\\Feature\\Account\\Command\\ForgetPassword\\CheckOTPCode.cs",
+              "ToolTip": "C:\\Users\\hhhh\\Desktop\\HandiMaker.Api\\HandiMaker.Core\\Feature\\Account\\Command\\ForgetPassword\\CheckOTPCode.cs",
+              "RelativeToolTip": "HandiMaker.Core\\Feature\\Account\\Command\\ForgetPassword\\CheckOTPCode.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAAACwAAABWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-08T04:29:15.097Z",
               "EditorCaption": ""
             }
           ]

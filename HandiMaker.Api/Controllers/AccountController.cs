@@ -1,4 +1,5 @@
 ﻿using HandiMaker.Core.Feature.Account.Command;
+using HandiMaker.Core.Feature.Account.Command.ForgetPassword;
 using HandiMaker.Core.Feature.Account.Query;
 using HandiMaker.Core.ResponseBase.GeneralResponse;
 using MediatR;
@@ -57,6 +58,25 @@ namespace HandiMaker.Api.Controllers
         public async Task<ActionResult<BaseResponse<GetCurUserDto>>> GetCurUser()
         {
             var model = new GetCurUserModel() { UserEmail = User.FindFirstValue(ClaimTypes.Email) };
+            return BaseOk(await _mediator.Send(model));
+        }
+
+
+        [HttpPost("RequestResetPass")]
+        public async Task<ActionResult<BaseResponse<string>>> RequestResetPass([FromBody] RequestResetPassModel model)
+        {
+            return BaseOk(await _mediator.Send(model));
+        }
+
+        [HttpPost("CheckOTPCode")]
+        public async Task<ActionResult<BaseResponse<string>>> CheckOTPCode([FromBody] CheckOTPCodeModel model)
+        {
+            return BaseOk(await _mediator.Send(model));
+        }
+
+        [HttpPost("ResetPassword")]
+        public async Task<ActionResult<BaseResponse<string>>> ResetPassword(ResetPasswordModel model)
+        {
             return BaseOk(await _mediator.Send(model));
         }
 

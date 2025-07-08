@@ -3,7 +3,7 @@ using Fas7niApp.Infrastructure;
 using HandiMaker.Core;
 using HandiMaker.Data.Entities;
 using HandiMaker.Infrastructure.DbContextData;
-using HandiMaker.Service;
+using HandiMaker.Services;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
@@ -35,7 +35,7 @@ namespace HandiMaker.Api
             builder.Services.AddHttpContextAccessor()
                 .AddInfrastructureDependencies()
                 .AddCoreDependencies()
-                .AddServicesDependencies()
+                .AddServicesDependencies(builder.Configuration)
                 .AddJWTTokenConfigurations(builder.Configuration);
 
 
