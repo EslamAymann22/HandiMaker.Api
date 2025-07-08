@@ -32,7 +32,8 @@ namespace HandiMaker.Api
                 .AddEntityFrameworkStores<HandiMakerDbContext>()
                 .AddDefaultTokenProviders();
 
-            builder.Services.AddInfrastructureDependencies()
+            builder.Services.AddHttpContextAccessor()
+                .AddInfrastructureDependencies()
                 .AddCoreDependencies()
                 .AddServicesDependencies()
                 .AddJWTTokenConfigurations(builder.Configuration);

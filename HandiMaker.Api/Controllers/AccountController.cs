@@ -23,9 +23,23 @@ namespace HandiMaker.Api.Controllers
         {
             return BaseOk(await _mediator.Send(model));
         }
+        [Authorize]
+        [HttpPatch("RegisterSecondStep")]
+        public async Task<ActionResult<BaseResponse<string>>> RegisterSecondStep([FromForm] RegisterSecondStepModel model)
+        {
+            model.AuthorizeEmail = User.FindFirstValue(ClaimTypes.Email);
+            return BaseOk(await _mediator.Send(model));
+        }
         [HttpPost("Login")]
         public async Task<ActionResult<BaseResponse<LoginDto>>> Login([FromBody] LoginModel model)
         {
+            return BaseOk(await _mediator.Send(model));
+        }
+        [Authorize]
+        [HttpPut("EditProfile")]
+        public async Task<ActionResult<BaseResponse<string>>> EditProfile([FromForm] EditAccountModel model)
+        {
+            model.AuthorizeEmail = User.FindFirstValue(ClaimTypes.Email);
             return BaseOk(await _mediator.Send(model));
         }
 

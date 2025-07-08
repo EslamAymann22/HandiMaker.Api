@@ -10,6 +10,7 @@ namespace HandiMaker.Core.Feature.Account.Command
 {
     public class LoginDto
     {
+        public string UserId { get; set; }
         public string UserName { get; set; }
         public string PictureUrl { get; set; }
         public UserRole Role { get; set; }
@@ -49,6 +50,7 @@ namespace HandiMaker.Core.Feature.Account.Command
 
             var Result = new LoginDto()
             {
+                UserId = user.Id,
                 FirstName = user.FirstName,
                 LastName = user.LastName,
                 PictureUrl = user.PictureUrl,

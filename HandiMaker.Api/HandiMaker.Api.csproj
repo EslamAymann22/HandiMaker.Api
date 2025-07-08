@@ -19,4 +19,8 @@
     <ProjectReference Include="..\HandiMaker.Services\HandiMaker.Services.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\Files\" />
+  </ItemGroup>
+
 </Project>
