@@ -79,6 +79,12 @@ namespace HandiMaker.Api.Controllers
         {
             return BaseOk(await _mediator.Send(model));
         }
-
+        [Authorize]
+        [HttpPut("ChangePassword")]
+        public async Task<ActionResult<BaseResponse<string>>> ChangePassword([FromBody] ChangePasswordModel model)
+        {
+            model.AuthEmail = User.FindFirstValue(ClaimTypes.Email);
+            return BaseOk(await _mediator.Send(model));
+        }
     }
 }
