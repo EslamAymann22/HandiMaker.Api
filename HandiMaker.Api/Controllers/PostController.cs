@@ -1,4 +1,5 @@
 ﻿using HandiMaker.Core.Feature.Post.Command;
+using HandiMaker.Core.Feature.Post.Query;
 using HandiMaker.Core.ResponseBase.GeneralResponse;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
@@ -41,6 +42,12 @@ namespace HandiMaker.Api.Controllers
             return BaseOk(await _mediator.Send(model));
         }
 
+        [HttpGet("GetAllUserPosts")]
+        public async Task<ActionResult<BaseResponse<List<GetAllUserPostsDto>>>> GetAllUserPosts([FromQuery] GetAllUserPostsModel model)
+        {
+            model.AuthorizeEmail = User.FindFirstValue(ClaimTypes.Email);
+            return BaseOk(await _mediator.Send(model));
 
+        }
     }
 }
