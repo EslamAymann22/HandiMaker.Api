@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace HandiMaker.Infrastructure.Migrations
 {
     [DbContext(typeof(HandiMakerDbContext))]
-    [Migration("20250704122220_init")]
-    partial class init
+    [Migration("20250709220451_Init")]
+    partial class Init
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -247,6 +247,9 @@ namespace HandiMaker.Infrastructure.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<string>("Content")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
 
@@ -272,7 +275,12 @@ namespace HandiMaker.Infrastructure.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("PostId")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
+
+                    b.HasIndex("PostId");
 
                     b.ToTable("PostsPictures");
                 });
@@ -603,6 +611,17 @@ namespace HandiMaker.Infrastructure.Migrations
                     b.Navigation("PostOwner");
                 });
 
+            modelBuilder.Entity("HandiMaker.Data.Entities.PostClasses.PostPicture", b =>
+                {
+                    b.HasOne("HandiMaker.Data.Entities.PostClasses.Post", "Post")
+                        .WithMany("postPictures")
+                        .HasForeignKey("PostId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Post");
+                });
+
             modelBuilder.Entity("HandiMaker.Data.Entities.ProductClasses.Product", b =>
                 {
                     b.HasOne("HandiMaker.Data.Entities.AppUser", "Owner")
@@ -732,6 +751,8 @@ namespace HandiMaker.Infrastructure.Migrations
             modelBuilder.Entity("HandiMaker.Data.Entities.PostClasses.Post", b =>
                 {
                     b.Navigation("Comments");
+
+                    b.Navigation("postPictures");
                 });
 
             modelBuilder.Entity("HandiMaker.Data.Entities.ProductClasses.Product", b =>

@@ -19,7 +19,6 @@ namespace HandiMaker.Infrastructure.Config
             builder.HasMany(U => U.ReactedPosts)
                 .WithMany(P => P.ReactedUsers);
 
-
             // Comments
             builder.HasMany(U => U.CreatedComments)
                 .WithOne(C => C.CommentOwner)

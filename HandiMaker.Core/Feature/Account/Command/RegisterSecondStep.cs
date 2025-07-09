@@ -58,7 +58,7 @@ namespace HandiMaker.Core.Feature.Account.Command
 
             if (request.ProfilePicture is not null)
             {
-                var PicUrl = DocumentServices.UploadFile(request.ProfilePicture, "ProfileImages", _httpContextAccessor);
+                var PicUrl = DocumentServices.UploadFile(request.ProfilePicture, FoldersName.ProfileImages.ToString(), _httpContextAccessor);
                 User.PictureUrl = PicUrl;
             }
 

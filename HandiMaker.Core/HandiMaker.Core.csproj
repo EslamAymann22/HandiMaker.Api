@@ -20,4 +20,8 @@
     <ProjectReference Include="..\HandiMaker.Services\HandiMaker.Services.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Feature\Post\Query\" />
+  </ItemGroup>
+
 </Project>

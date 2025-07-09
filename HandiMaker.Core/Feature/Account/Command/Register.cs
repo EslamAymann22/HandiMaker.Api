@@ -69,7 +69,8 @@ namespace HandiMaker.Core.Feature.Account.Command
                     Token = await _authenticationServices.GetJWTTokenAsync(user, _userManager)
                 });
             }
-            return Failed<RegisterDto>(HttpStatusCode.InternalServerError);
+            var Errors = string.Join("; ", Result.Errors.Select(e => e.Description));
+            return Failed<RegisterDto>(HttpStatusCode.InternalServerError, Errors);
         }
     }
 

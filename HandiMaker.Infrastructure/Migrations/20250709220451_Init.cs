@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace HandiMaker.Infrastructure.Migrations
 {
     /// <inheritdoc />
-    public partial class init : Migration
+    public partial class Init : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -55,19 +55,6 @@ namespace HandiMaker.Infrastructure.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_AspNetUsers", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "PostsPictures",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    PicturUrl = table.Column<string>(type: "nvarchar(max)", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_PostsPictures", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -234,6 +221,7 @@ namespace HandiMaker.Infrastructure.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
+                    Content = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false),
                     PostOwnerId = table.Column<string>(type: "nvarchar(450)", nullable: true)
                 },
@@ -355,6 +343,26 @@ namespace HandiMaker.Infrastructure.Migrations
                         principalTable: "Posts",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "PostsPictures",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    PicturUrl = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    PostId = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_PostsPictures", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_PostsPictures_Posts_PostId",
+                        column: x => x.PostId,
+                        principalTable: "Posts",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -504,6 +512,11 @@ namespace HandiMaker.Infrastructure.Migrations
                 name: "IX_Posts_PostOwnerId",
                 table: "Posts",
                 column: "PostOwnerId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_PostsPictures_PostId",
+                table: "PostsPictures",
+                column: "PostId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_ProductColors_ProductId",
