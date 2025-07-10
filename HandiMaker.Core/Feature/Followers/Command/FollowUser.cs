@@ -26,7 +26,10 @@ namespace HandiMaker.Core.Feature.Followers.Command
         {
             var FollowedUser = await _handiMakerDb.Users.FirstOrDefaultAsync(U => U.Id == request.FollowedUserId);
             var RequestUser = await _handiMakerDb.Users.FirstOrDefaultAsync(U => U.Email == request.RequestUserEmail);
-
+            if (FollowedUser is null)
+                return Failed<string>(HttpStatusCode.NotFound, "Followed User Not Found");
+            if (RequestUser is null)
+                return Failed<string>(HttpStatusCode.Unauthorized, "Request User Not Found or Unauthorized");
             if (FollowedUser.Id == RequestUser.Id)
                 return Failed<string>(HttpStatusCode.BadRequest, "User Want Follow HimSelf!!");
 

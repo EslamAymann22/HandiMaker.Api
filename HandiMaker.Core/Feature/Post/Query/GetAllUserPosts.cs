@@ -10,6 +10,7 @@ namespace HandiMaker.Core.Feature.Post.Query
 {
     public class GetAllUserPostsDto
     {
+        public int PostId { get; set; }
         public string? FirstName { get; set; }
         public string? LastName { get; set; }
         public string? Content { get; set; }
@@ -49,6 +50,7 @@ namespace HandiMaker.Core.Feature.Post.Query
                 .Include(P => P.ReactedUsers).Include(P => P.Comments).Include(P => P.PostOwner).Include(P => P.postPictures);
             var posts = await PostsQ.Select(P => new GetAllUserPostsDto
             {
+                PostId = P.Id,
                 FirstName = user.FirstName,
                 LastName = user.LastName,
                 Content = P.Content,
