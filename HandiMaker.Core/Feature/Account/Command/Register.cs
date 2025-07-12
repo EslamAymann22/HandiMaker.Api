@@ -60,6 +60,7 @@ namespace HandiMaker.Core.Feature.Account.Command
             };
 
             var Result = await _userManager.CreateAsync(user, request.Password);
+            await _userManager.AddToRoleAsync(user, request.Role.ToString());
             if (Result.Succeeded)
             {
                 user = await _userManager.FindByEmailAsync(request.Email);

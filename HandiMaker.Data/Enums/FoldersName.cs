@@ -3,6 +3,7 @@
     public enum FoldersName
     {
         ProfileImages,
-        PostImages
+        PostImages,
+        ProductImages
     }
 }

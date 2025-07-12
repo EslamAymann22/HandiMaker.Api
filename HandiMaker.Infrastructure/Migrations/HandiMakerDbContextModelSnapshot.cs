@@ -34,7 +34,7 @@ namespace HandiMaker.Infrastructure.Migrations
 
                     b.HasIndex("ReactedUsersId");
 
-                    b.ToTable("AppUserPost");
+                    b.ToTable("AppUserPost", (string)null);
                 });
 
             modelBuilder.Entity("AppUserProduct", b =>
@@ -49,7 +49,7 @@ namespace HandiMaker.Infrastructure.Migrations
 
                     b.HasIndex("FavProductsId");
 
-                    b.ToTable("AppUserProduct");
+                    b.ToTable("AppUserProduct", (string)null);
                 });
 
             modelBuilder.Entity("HandiMaker.Data.Entities.AppUser", b =>
@@ -170,7 +170,7 @@ namespace HandiMaker.Infrastructure.Migrations
 
                     b.HasIndex("PostId");
 
-                    b.ToTable("Comments");
+                    b.ToTable("Comments", (string)null);
                 });
 
             modelBuilder.Entity("HandiMaker.Data.Entities.Message", b =>
@@ -205,7 +205,7 @@ namespace HandiMaker.Infrastructure.Migrations
 
                     b.HasIndex("SenderId");
 
-                    b.ToTable("Messages");
+                    b.ToTable("Messages", (string)null);
                 });
 
             modelBuilder.Entity("HandiMaker.Data.Entities.Notification", b =>
@@ -233,7 +233,7 @@ namespace HandiMaker.Infrastructure.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("Notifications");
+                    b.ToTable("Notifications", (string)null);
                 });
 
             modelBuilder.Entity("HandiMaker.Data.Entities.PostClasses.Post", b =>
@@ -257,7 +257,7 @@ namespace HandiMaker.Infrastructure.Migrations
 
                     b.HasIndex("PostOwnerId");
 
-                    b.ToTable("Posts");
+                    b.ToTable("Posts", (string)null);
                 });
 
             modelBuilder.Entity("HandiMaker.Data.Entities.PostClasses.PostPicture", b =>
@@ -279,7 +279,7 @@ namespace HandiMaker.Infrastructure.Migrations
 
                     b.HasIndex("PostId");
 
-                    b.ToTable("PostsPictures");
+                    b.ToTable("PostsPictures", (string)null);
                 });
 
             modelBuilder.Entity("HandiMaker.Data.Entities.ProductClasses.Product", b =>
@@ -320,7 +320,7 @@ namespace HandiMaker.Infrastructure.Migrations
 
                     b.HasIndex("OwnerId");
 
-                    b.ToTable("Products");
+                    b.ToTable("Products", (string)null);
                 });
 
             modelBuilder.Entity("HandiMaker.Data.Entities.ProductClasses.ProductColor", b =>
@@ -341,7 +341,7 @@ namespace HandiMaker.Infrastructure.Migrations
 
                     b.HasIndex("ProductId");
 
-                    b.ToTable("ProductColors");
+                    b.ToTable("ProductColors", (string)null);
                 });
 
             modelBuilder.Entity("HandiMaker.Data.Entities.ProductClasses.ProductPicture", b =>
@@ -363,7 +363,7 @@ namespace HandiMaker.Infrastructure.Migrations
 
                     b.HasIndex("ProductId");
 
-                    b.ToTable("ProductPictures");
+                    b.ToTable("ProductPictures", (string)null);
                 });
 
             modelBuilder.Entity("HandiMaker.Data.Entities.UserClassese.UserFollow", b =>
@@ -381,7 +381,7 @@ namespace HandiMaker.Infrastructure.Migrations
 
                     b.HasIndex("FollowerId");
 
-                    b.ToTable("UserFollows");
+                    b.ToTable("UserFollows", (string)null);
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
