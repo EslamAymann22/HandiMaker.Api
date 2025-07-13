@@ -1,0 +1,65 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\hhhh\\Desktop\\HandiMaker.Api\\HandiMaker.Api\\wwwroot\\Files\\PostImages\\84ddd60d-013d-436f-9178-f96f76f485ebGreatest_23.jpg",
+      "PackagePath": "staticwebassets\\Files\\PostImages\\84ddd60d-013d-436f-9178-f96f76f485ebGreatest_23.jpg"
+    },
+    {
+      "Id": "C:\\Users\\hhhh\\Desktop\\HandiMaker.Api\\HandiMaker.Api\\wwwroot\\Files\\PostImages\\8f5e4491-04cc-4655-b7ad-a097a48bd952Greatest_24.jpg",
+      "PackagePath": "staticwebassets\\Files\\PostImages\\8f5e4491-04cc-4655-b7ad-a097a48bd952Greatest_24.jpg"
+    },
+    {
+      "Id": "C:\\Users\\hhhh\\Desktop\\HandiMaker.Api\\HandiMaker.Api\\wwwroot\\Files\\ProductImages\\0c266b78-f35d-460b-bf67-a24fb87f70e8LeetCode.png",
+      "PackagePath": "staticwebassets\\Files\\ProductImages\\0c266b78-f35d-460b-bf67-a24fb87f70e8LeetCode.png"
+    },
+    {
+      "Id": "C:\\Users\\hhhh\\Desktop\\HandiMaker.Api\\HandiMaker.Api\\wwwroot\\Files\\ProductImages\\1d55f20d-2487-47ea-8824-2573056c4b6aLeetCode.png",
+      "PackagePath": "staticwebassets\\Files\\ProductImages\\1d55f20d-2487-47ea-8824-2573056c4b6aLeetCode.png"
+    },
+    {
+      "Id": "C:\\Users\\hhhh\\Desktop\\HandiMaker.Api\\HandiMaker.Api\\wwwroot\\Files\\ProductImages\\2f7d6ab8-466b-4fe0-882e-a9401f1bcc22LeetCode.png",
+      "PackagePath": "staticwebassets\\Files\\ProductImages\\2f7d6ab8-466b-4fe0-882e-a9401f1bcc22LeetCode.png"
+    },
+    {
+      "Id": "C:\\Users\\hhhh\\Desktop\\HandiMaker.Api\\HandiMaker.Api\\wwwroot\\Files\\ProductImages\\6820e53b-0fa1-44fc-b608-c8a4d3497274LeetCode.png",
+      "PackagePath": "staticwebassets\\Files\\ProductImages\\6820e53b-0fa1-44fc-b608-c8a4d3497274LeetCode.png"
+    },
+    {
+      "Id": "C:\\Users\\hhhh\\Desktop\\HandiMaker.Api\\HandiMaker.Api\\wwwroot\\Files\\ProductImages\\7854d65d-f338-4cdc-ae3d-915541d56552LeetCode.png",
+      "PackagePath": "staticwebassets\\Files\\ProductImages\\7854d65d-f338-4cdc-ae3d-915541d56552LeetCode.png"
+    },
+    {
+      "Id": "C:\\Users\\hhhh\\Desktop\\HandiMaker.Api\\HandiMaker.Api\\wwwroot\\Files\\ProductImages\\851345ce-c591-4648-abed-4a55f22158c3LeetCode.png",
+      "PackagePath": "staticwebassets\\Files\\ProductImages\\851345ce-c591-4648-abed-4a55f22158c3LeetCode.png"
+    },
+    {
+      "Id": "C:\\Users\\hhhh\\Desktop\\HandiMaker.Api\\HandiMaker.Api\\wwwroot\\Files\\ProductImages\\8ac6cf42-8657-4199-8cb5-6dfac73c1e75LeetCode.png",
+      "PackagePath": "staticwebassets\\Files\\ProductImages\\8ac6cf42-8657-4199-8cb5-6dfac73c1e75LeetCode.png"
+    },
+    {
+      "Id": "C:\\Users\\hhhh\\Desktop\\HandiMaker.Api\\HandiMaker.Api\\wwwroot\\Files\\ProductImages\\939f8348-81b2-4ca8-b106-2cfdee105d3eLeetCode.png",
+      "PackagePath": "staticwebassets\\Files\\ProductImages\\939f8348-81b2-4ca8-b106-2cfdee105d3eLeetCode.png"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.HandiMaker.Api.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.HandiMaker.Api.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.HandiMaker.Api.props",
+      "PackagePath": "build\\HandiMaker.Api.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.HandiMaker.Api.props",
+      "PackagePath": "buildMultiTargeting\\HandiMaker.Api.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.HandiMaker.Api.props",
+      "PackagePath": "buildTransitive\\HandiMaker.Api.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
