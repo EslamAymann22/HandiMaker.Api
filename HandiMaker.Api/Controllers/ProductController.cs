@@ -60,5 +60,19 @@ namespace HandiMaker.Api.Controllers
             return Ok(await _mediator.Send(model));
         }
 
+        [HttpGet("GetFavList")]
+        [Authorize]
+        public async Task<ActionResult<PaginatedResponse<GetProductsDto>>> GetFavList([FromQuery] GetFavListModel model)
+        {
+            model.AuthorizeEmail = User.FindFirstValue(ClaimTypes.Email);
+            return Ok(await _mediator.Send(model));
+        }
+
+        [HttpGet("GetProductById")]
+        public async Task<ActionResult<BaseResponse<GetProductsDto>>> GetProductById([FromQuery] GetProductByIdModel model)
+        {
+            return BaseOk(await _mediator.Send(model));
+        }
+
     }
 }
