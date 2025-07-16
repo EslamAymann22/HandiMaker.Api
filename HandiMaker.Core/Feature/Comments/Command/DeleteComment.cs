@@ -29,9 +29,19 @@ namespace HandiMaker.Core.Feature.Comments.Command
             if (comment is null)
                 return Failed<string>(HttpStatusCode.NotFound, "This comment is not founded");
 
+            if (comment.CommentOwnerId != user.Id)
+                return Failed<string>(HttpStatusCode.Forbidden, "You aren't comment owner");
+
+            var parent = await _handiMakerDb.Comments.FindAsync(comment.ParentId);
+
             try
             {
                 _handiMakerDb.Comments.Remove(comment);
+                if (parent is not null)
+                {
+                    parent.NumOfChildren--;
+                    _handiMakerDb.Comments.Update(parent);
+                }
                 await _handiMakerDb.SaveChangesAsync(cancellationToken);
                 return Success("Comment deleted!");
             }

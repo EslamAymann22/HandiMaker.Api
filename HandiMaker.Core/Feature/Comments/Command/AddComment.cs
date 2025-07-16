@@ -10,10 +10,10 @@ namespace HandiMaker.Core.Feature.Comments.Command
 {
     public class AddCommentModel : IRequest<BaseResponse<string>>
     {
-        public string? AuthorizeEmail { get; set; }
-        public string Content { get; set; }
         public int PostId { get; set; }
+        public string Content { get; set; }
         public int? ParentCommentId { get; set; }
+        public string? AuthorizeEmail { get; set; }
     }
 
     public class AddCommentHandler : BaseResponseHandler, IRequestHandler<AddCommentModel, BaseResponse<string>>
@@ -42,9 +42,16 @@ namespace HandiMaker.Core.Feature.Comments.Command
                 CreatedAt = DateTime.UtcNow,
                 PostId = request.PostId
             };
+            var parent = await _handiMakerDb.Comments.FindAsync(request.ParentCommentId ?? 0);
+
             try
             {
                 await _handiMakerDb.Comments.AddAsync(NewComment);
+                if (parent is not null)
+                {
+                    parent.NumOfChildren++;
+                    _handiMakerDb.Comments.Update(parent);
+                }
                 await _handiMakerDb.SaveChangesAsync(cancellationToken);
                 return Success("Comment Added!");
             }

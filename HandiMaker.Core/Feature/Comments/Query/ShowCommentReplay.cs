@@ -21,13 +21,14 @@ namespace HandiMaker.Core.Feature.Comments.Query
         public async Task<PaginatedResponse<GetCommentDto>> Handle(ShowCommentReplayModel request, CancellationToken cancellationToken)
         {
             var Qdata = _handiMakerDb.Comments.Where(C => C.Id == request.CommentId)
-                .Include(C => C.Children).Include(C => C.CommentOwner).Select(
+                .Include(C => C.Children).SelectMany(C => C.Children).Select(
                 C => new GetCommentDto
                 {
                     CommentId = C.Id,
                     CommentOwnerId = C.CommentOwnerId,
                     Content = C.Content,
                     CreatedAt = C.CreatedAt,
+                    HavChilds = C.NumOfChildren > 0,
                     FirstName = C.CommentOwner.FirstName,
                     LastName = C.CommentOwner.LastName,
                     PictureUrl = C.CommentOwner.PictureUrl,

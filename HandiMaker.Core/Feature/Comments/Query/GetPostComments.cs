@@ -14,6 +14,7 @@ namespace HandiMaker.Core.Feature.Comments.Query
         public string? LastName { get; set; }
         public string? PictureUrl { get; set; }
         public DateTime CreatedAt { get; set; }
+        public bool HavChilds { get; set; }
     }
 
     public class GetPostCommentsModel : PaginationParams, IRequest<PaginatedResponse<GetCommentDto>>
@@ -46,6 +47,7 @@ namespace HandiMaker.Core.Feature.Comments.Query
                     CommentOwnerId = C.CommentOwnerId,
                     Content = C.Content,
                     CreatedAt = C.CreatedAt,
+                    HavChilds = C.NumOfChildren > 0,
                     FirstName = C.CommentOwner.FirstName,
                     LastName = C.CommentOwner.LastName,
                     PictureUrl = C.CommentOwner.PictureUrl

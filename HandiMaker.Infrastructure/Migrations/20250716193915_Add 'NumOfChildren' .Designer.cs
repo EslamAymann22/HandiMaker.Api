@@ -4,6 +4,7 @@ using HandiMaker.Infrastructure.DbContextData;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace HandiMaker.Infrastructure.Migrations
 {
     [DbContext(typeof(HandiMakerDbContext))]
-    partial class HandiMakerDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250716193915_Add 'NumOfChildren' ")]
+    partial class AddNumOfChildren
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
