@@ -34,7 +34,7 @@ namespace HandiMaker.Infrastructure.Migrations
 
                     b.HasIndex("ReactedUsersId");
 
-                    b.ToTable("AppUserPost", (string)null);
+                    b.ToTable("AppUserPost");
                 });
 
             modelBuilder.Entity("AppUserProduct", b =>
@@ -49,7 +49,7 @@ namespace HandiMaker.Infrastructure.Migrations
 
                     b.HasIndex("FavProductsId");
 
-                    b.ToTable("AppUserProduct", (string)null);
+                    b.ToTable("AppUserProduct");
                 });
 
             modelBuilder.Entity("HandiMaker.Data.Entities.AppUser", b =>
@@ -170,7 +170,7 @@ namespace HandiMaker.Infrastructure.Migrations
 
                     b.HasIndex("PostId");
 
-                    b.ToTable("Comments", (string)null);
+                    b.ToTable("Comments");
                 });
 
             modelBuilder.Entity("HandiMaker.Data.Entities.Message", b =>
@@ -205,7 +205,7 @@ namespace HandiMaker.Infrastructure.Migrations
 
                     b.HasIndex("SenderId");
 
-                    b.ToTable("Messages", (string)null);
+                    b.ToTable("Messages");
                 });
 
             modelBuilder.Entity("HandiMaker.Data.Entities.Notification", b =>
@@ -233,7 +233,7 @@ namespace HandiMaker.Infrastructure.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("Notifications", (string)null);
+                    b.ToTable("Notifications");
                 });
 
             modelBuilder.Entity("HandiMaker.Data.Entities.PostClasses.Post", b =>
@@ -257,7 +257,7 @@ namespace HandiMaker.Infrastructure.Migrations
 
                     b.HasIndex("PostOwnerId");
 
-                    b.ToTable("Posts", (string)null);
+                    b.ToTable("Posts");
                 });
 
             modelBuilder.Entity("HandiMaker.Data.Entities.PostClasses.PostPicture", b =>
@@ -279,7 +279,7 @@ namespace HandiMaker.Infrastructure.Migrations
 
                     b.HasIndex("PostId");
 
-                    b.ToTable("PostsPictures", (string)null);
+                    b.ToTable("PostsPictures");
                 });
 
             modelBuilder.Entity("HandiMaker.Data.Entities.ProductClasses.Product", b =>
@@ -320,7 +320,7 @@ namespace HandiMaker.Infrastructure.Migrations
 
                     b.HasIndex("OwnerId");
 
-                    b.ToTable("Products", (string)null);
+                    b.ToTable("Products");
                 });
 
             modelBuilder.Entity("HandiMaker.Data.Entities.ProductClasses.ProductColor", b =>
@@ -341,7 +341,7 @@ namespace HandiMaker.Infrastructure.Migrations
 
                     b.HasIndex("ProductId");
 
-                    b.ToTable("ProductColors", (string)null);
+                    b.ToTable("ProductColors");
                 });
 
             modelBuilder.Entity("HandiMaker.Data.Entities.ProductClasses.ProductPicture", b =>
@@ -363,7 +363,7 @@ namespace HandiMaker.Infrastructure.Migrations
 
                     b.HasIndex("ProductId");
 
-                    b.ToTable("ProductPictures", (string)null);
+                    b.ToTable("ProductPictures");
                 });
 
             modelBuilder.Entity("HandiMaker.Data.Entities.UserClassese.UserFollow", b =>
@@ -381,7 +381,7 @@ namespace HandiMaker.Infrastructure.Migrations
 
                     b.HasIndex("FollowerId");
 
-                    b.ToTable("UserFollows", (string)null);
+                    b.ToTable("UserFollows");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
@@ -557,7 +557,7 @@ namespace HandiMaker.Infrastructure.Migrations
                     b.HasOne("HandiMaker.Data.Entities.Comment", "Parent")
                         .WithMany("Children")
                         .HasForeignKey("ParentId")
-                        .OnDelete(DeleteBehavior.Restrict);
+                        .OnDelete(DeleteBehavior.Cascade);
 
                     b.HasOne("HandiMaker.Data.Entities.PostClasses.Post", "Post")
                         .WithMany("Comments")

@@ -17,7 +17,7 @@ namespace HandiMaker.Infrastructure.Config
             builder.HasOne(C => C.Parent)
                 .WithMany(C => C.Children)
                 .HasForeignKey(C => C.ParentId)
-                .OnDelete(DeleteBehavior.Restrict);
+                .OnDelete(DeleteBehavior.Cascade);
 
         }
     }

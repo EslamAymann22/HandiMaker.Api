@@ -3,8 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\hhhh\\Desktop\\HandiMaker.Api\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{F8303718-5AC9-479D-8AB7-77688517D435}|HandiMaker.Core\\HandiMaker.Core.csproj|c:\\users\\hhhh\\desktop\\handimaker.api\\handimaker.core\\feature\\comment\\command\\addcomment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F8303718-5AC9-479D-8AB7-77688517D435}|HandiMaker.Core\\HandiMaker.Core.csproj|solutionrelative:handimaker.core\\feature\\comment\\command\\addcomment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB4EAA76-67A5-42D3-BC5F-9C4529926A5F}|HandiMaker.Infrastructure\\HandiMaker.Infrastructure.csproj|c:\\users\\hhhh\\desktop\\handimaker.api\\handimaker.infrastructure\\config\\commentconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB4EAA76-67A5-42D3-BC5F-9C4529926A5F}|HandiMaker.Infrastructure\\HandiMaker.Infrastructure.csproj|solutionrelative:handimaker.infrastructure\\config\\commentconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F8303718-5AC9-479D-8AB7-77688517D435}|HandiMaker.Core\\HandiMaker.Core.csproj|c:\\users\\hhhh\\desktop\\handimaker.api\\handimaker.core\\feature\\comment\\getpostcomments.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F8303718-5AC9-479D-8AB7-77688517D435}|HandiMaker.Core\\HandiMaker.Core.csproj|solutionrelative:handimaker.core\\feature\\comment\\getpostcomments.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{368ACCE2-564B-45FA-8962-7C0CCBFF2280}|HandiMaker.Api\\HandiMaker.Api.csproj|c:\\users\\hhhh\\desktop\\handimaker.api\\handimaker.api\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{368ACCE2-564B-45FA-8962-7C0CCBFF2280}|HandiMaker.Api\\HandiMaker.Api.csproj|solutionrelative:handimaker.api\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F8303718-5AC9-479D-8AB7-77688517D435}|HandiMaker.Core\\HandiMaker.Core.csproj|c:\\users\\hhhh\\desktop\\handimaker.api\\handimaker.core\\feature\\products\\query\\getproductbyidhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F8303718-5AC9-479D-8AB7-77688517D435}|HandiMaker.Core\\HandiMaker.Core.csproj|solutionrelative:handimaker.core\\feature\\products\\query\\getproductbyidhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,13 +50,64 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CommentConfig.cs",
+              "DocumentMoniker": "C:\\Users\\hhhh\\Desktop\\HandiMaker.Api\\HandiMaker.Infrastructure\\Config\\CommentConfig.cs",
+              "RelativeDocumentMoniker": "HandiMaker.Infrastructure\\Config\\CommentConfig.cs",
+              "ToolTip": "C:\\Users\\hhhh\\Desktop\\HandiMaker.Api\\HandiMaker.Infrastructure\\Config\\CommentConfig.cs",
+              "RelativeToolTip": "HandiMaker.Infrastructure\\Config\\CommentConfig.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-16T12:50:55.837Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "GetPostComments.cs",
+              "DocumentMoniker": "C:\\Users\\hhhh\\Desktop\\HandiMaker.Api\\HandiMaker.Core\\Feature\\Comment\\GetPostComments.cs",
+              "RelativeDocumentMoniker": "HandiMaker.Core\\Feature\\Comment\\GetPostComments.cs",
+              "ToolTip": "C:\\Users\\hhhh\\Desktop\\HandiMaker.Api\\HandiMaker.Core\\Feature\\Comment\\GetPostComments.cs",
+              "RelativeToolTip": "HandiMaker.Core\\Feature\\Comment\\GetPostComments.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-16T12:42:33.477Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "AddComment.cs",
+              "DocumentMoniker": "C:\\Users\\hhhh\\Desktop\\HandiMaker.Api\\HandiMaker.Core\\Feature\\Comment\\Command\\AddComment.cs",
+              "RelativeDocumentMoniker": "HandiMaker.Core\\Feature\\Comment\\Command\\AddComment.cs",
+              "ToolTip": "C:\\Users\\hhhh\\Desktop\\HandiMaker.Api\\HandiMaker.Core\\Feature\\Comment\\Command\\AddComment.cs*",
+              "RelativeToolTip": "HandiMaker.Core\\Feature\\Comment\\Command\\AddComment.cs*",
+              "ViewState": "AgIAABwAAAAAAAAAAAAAADAAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-16T12:35:40.784Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "GetProductByIdHandler.cs",
+              "DocumentMoniker": "C:\\Users\\hhhh\\Desktop\\HandiMaker.Api\\HandiMaker.Core\\Feature\\Products\\Query\\GetProductByIdHandler.cs",
+              "RelativeDocumentMoniker": "HandiMaker.Core\\Feature\\Products\\Query\\GetProductByIdHandler.cs",
+              "ToolTip": "C:\\Users\\hhhh\\Desktop\\HandiMaker.Api\\HandiMaker.Core\\Feature\\Products\\Query\\GetProductByIdHandler.cs",
+              "RelativeToolTip": "HandiMaker.Core\\Feature\\Products\\Query\\GetProductByIdHandler.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAgwC0AAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-14T17:51:27.527Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "ProductController.cs",
               "DocumentMoniker": "C:\\Users\\hhhh\\Desktop\\HandiMaker.Api\\HandiMaker.Api\\Controllers\\ProductController.cs",
               "RelativeDocumentMoniker": "HandiMaker.Api\\Controllers\\ProductController.cs",
               "ToolTip": "C:\\Users\\hhhh\\Desktop\\HandiMaker.Api\\HandiMaker.Api\\Controllers\\ProductController.cs",
               "RelativeToolTip": "HandiMaker.Api\\Controllers\\ProductController.cs",
-              "ViewState": "AgIAADAAAAAAAAAAAAAlwDkAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAADIAAAAAAAAAAAAqwEoAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-12T07:38:29.553Z",
               "EditorCaption": ""
