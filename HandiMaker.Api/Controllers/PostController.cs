@@ -1,6 +1,7 @@
 ﻿using HandiMaker.Core.Feature.Post.Command;
 using HandiMaker.Core.Feature.Post.Query;
 using HandiMaker.Core.ResponseBase.GeneralResponse;
+using HandiMaker.Core.ResponseBase.Paginations;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -55,5 +56,14 @@ namespace HandiMaker.Api.Controllers
             model.AuthorizeEmail = User.FindFirstValue(ClaimTypes.Email);
             return BaseOk(await _mediator.Send(model));
         }
+
+        [HttpGet("GetHomePosts")]
+        public async Task<ActionResult<PaginatedResponse<GetHomePostDto>>> GetHomePosts([FromQuery] GetHomePostsModel model)
+        {
+            model.AuthorizeEmail = User.FindFirstValue(ClaimTypes.Email);
+            return await _mediator.Send(model);
+        }
+
+
     }
 }

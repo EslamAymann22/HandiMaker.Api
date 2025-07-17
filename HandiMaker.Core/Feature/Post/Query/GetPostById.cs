@@ -27,7 +27,7 @@ namespace HandiMaker.Core.Feature.Post.Query
         {
             var user = await _userManager.FindByEmailAsync(request.AuthorizeEmail ?? "");
 
-            var post = await _handiMakerDb.Posts.Where(P => P.Id == request.postId).Include(P => P.PostOwner).Select(
+            var post = await _handiMakerDb.Posts.Where(P => P.Id == request.postId).Select(
                 P => new GetPostDto
                 {
                     PostId = P.Id,

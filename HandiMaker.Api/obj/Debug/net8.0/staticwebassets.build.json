@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "z5uL4tYDrnaUAhRYTdoud52rPvQo3yeijiJxrTxkhFs=",
+  "Hash": "4P7hEfRVqruER2Sc1OeOLnGWaBxUaimfmTesQelie9g=",
   "Source": "HandiMaker.Api",
   "BasePath": "_content/HandiMaker.Api",
   "Mode": "Default",
@@ -57,6 +57,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Files\\PostImages\\8f5e4491-04cc-4655-b7ad-a097a48bd952Greatest_24.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\hhhh\\Desktop\\HandiMaker.Api\\HandiMaker.Api\\wwwroot\\Files\\PostImages\\e8b39f30-28bc-48f3-8e72-a45ee0a51e08500PAge.png",
+      "SourceId": "HandiMaker.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\hhhh\\Desktop\\HandiMaker.Api\\HandiMaker.Api\\wwwroot\\",
+      "BasePath": "_content/HandiMaker.Api",
+      "RelativePath": "Files/PostImages/e8b39f30-28bc-48f3-8e72-a45ee0a51e08500PAge#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "gzvtj4t7pw",
+      "Integrity": "1KUH2/hmjh+2beyXYeEoT3ZofYvX9+E2utFBiGUp3jY=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Files\\PostImages\\e8b39f30-28bc-48f3-8e72-a45ee0a51e08500PAge.png"
     },
     {
       "Identity": "C:\\Users\\hhhh\\Desktop\\HandiMaker.Api\\HandiMaker.Api\\wwwroot\\Files\\ProductImages\\0c266b78-f35d-460b-bf67-a24fb87f70e8LeetCode.png",
@@ -389,6 +410,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-Zdzc12EqNQWC/RS6F7yRqlWRZw4dVJN2EXZ6XgY0f10="
+        }
+      ]
+    },
+    {
+      "Route": "Files/PostImages/e8b39f30-28bc-48f3-8e72-a45ee0a51e08500PAge.gzvtj4t7pw.png",
+      "AssetFile": "C:\\Users\\hhhh\\Desktop\\HandiMaker.Api\\HandiMaker.Api\\wwwroot\\Files\\PostImages\\e8b39f30-28bc-48f3-8e72-a45ee0a51e08500PAge.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "607081"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"1KUH2/hmjh+2beyXYeEoT3ZofYvX9+E2utFBiGUp3jY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 17 Jul 2025 12:03:36 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "gzvtj4t7pw"
+        },
+        {
+          "Name": "label",
+          "Value": "Files/PostImages/e8b39f30-28bc-48f3-8e72-a45ee0a51e08500PAge.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-1KUH2/hmjh+2beyXYeEoT3ZofYvX9+E2utFBiGUp3jY="
+        }
+      ]
+    },
+    {
+      "Route": "Files/PostImages/e8b39f30-28bc-48f3-8e72-a45ee0a51e08500PAge.png",
+      "AssetFile": "C:\\Users\\hhhh\\Desktop\\HandiMaker.Api\\HandiMaker.Api\\wwwroot\\Files\\PostImages\\e8b39f30-28bc-48f3-8e72-a45ee0a51e08500PAge.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "607081"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"1KUH2/hmjh+2beyXYeEoT3ZofYvX9+E2utFBiGUp3jY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 17 Jul 2025 12:03:36 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-1KUH2/hmjh+2beyXYeEoT3ZofYvX9+E2utFBiGUp3jY="
         }
       ]
     },

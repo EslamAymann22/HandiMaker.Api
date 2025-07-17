@@ -818,6 +818,47 @@
   },
   {
     "ContainingType": "HandiMaker.Api.Controllers.PostController",
+    "Method": "GetHomePosts",
+    "RelativePath": "api/Post/GetHomePosts",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "AuthorizeEmail",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "PageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "PageNumber",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "SearchFilter",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "HandiMaker.Core.ResponseBase.Paginations.PaginatedResponse\u00601[[HandiMaker.Core.Feature.Post.Query.GetHomePostDto, HandiMaker.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HandiMaker.Api.Controllers.PostController",
     "Method": "GetPostById",
     "RelativePath": "api/Post/GetPostById",
     "HttpMethod": "GET",

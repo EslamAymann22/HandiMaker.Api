@@ -36,6 +36,24 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Files\PostImages\8f5e4491-04cc-4655-b7ad-a097a48bd952Greatest_24.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Files\PostImages\e8b39f30-28bc-48f3-8e72-a45ee0a51e08500PAge.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>HandiMaker.Api</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/HandiMaker.Api</BasePath>
+      <RelativePath>Files/PostImages/e8b39f30-28bc-48f3-8e72-a45ee0a51e08500PAge.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>gzvtj4t7pw</Fingerprint>
+      <Integrity>1KUH2/hmjh+2beyXYeEoT3ZofYvX9+E2utFBiGUp3jY=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Files\PostImages\e8b39f30-28bc-48f3-8e72-a45ee0a51e08500PAge.png'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Files\ProductImages\0c266b78-f35d-460b-bf67-a24fb87f70e8LeetCode.png'))">
       <SourceType>Package</SourceType>
       <SourceId>HandiMaker.Api</SourceId>
