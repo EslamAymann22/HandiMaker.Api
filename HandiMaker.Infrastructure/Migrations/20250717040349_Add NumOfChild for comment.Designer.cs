@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace HandiMaker.Infrastructure.Migrations
 {
     [DbContext(typeof(HandiMakerDbContext))]
-    [Migration("20250716193915_Add 'NumOfChildren' ")]
-    partial class AddNumOfChildren
+    [Migration("20250717040349_Add NumOfChild for comment")]
+    partial class AddNumOfChildforcomment
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -159,7 +159,7 @@ namespace HandiMaker.Infrastructure.Migrations
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
 
-                    b.Property<int?>("NumOfChildren")
+                    b.Property<int>("NumOfChildren")
                         .HasColumnType("int");
 
                     b.Property<int?>("ParentId")

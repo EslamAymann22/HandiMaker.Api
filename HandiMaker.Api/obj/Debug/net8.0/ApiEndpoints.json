@@ -806,7 +806,38 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "HandiMaker.Core.ResponseBase.GeneralResponse.BaseResponse\u00601[[System.Collections.Generic.List\u00601[[HandiMaker.Core.Feature.Post.Query.GetAllUserPostsDto, HandiMaker.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "Type": "HandiMaker.Core.ResponseBase.GeneralResponse.BaseResponse\u00601[[System.Collections.Generic.List\u00601[[HandiMaker.Core.Feature.Post.Query.GetPostDto, HandiMaker.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HandiMaker.Api.Controllers.PostController",
+    "Method": "GetPostById",
+    "RelativePath": "api/Post/GetPostById",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "postId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "AuthorizeEmail",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "HandiMaker.Core.ResponseBase.GeneralResponse.BaseResponse\u00601[[HandiMaker.Core.Feature.Post.Query.GetPostDto, HandiMaker.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",

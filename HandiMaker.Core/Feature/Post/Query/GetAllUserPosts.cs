@@ -8,7 +8,7 @@ using System.Net;
 
 namespace HandiMaker.Core.Feature.Post.Query
 {
-    public class GetAllUserPostsDto
+    public class GetPostDto
     {
         public int PostId { get; set; }
         public string? FirstName { get; set; }
@@ -21,13 +21,13 @@ namespace HandiMaker.Core.Feature.Post.Query
         public int numberOfComments { get; set; }
         public bool LoveIt { get; set; } = false;
     }
-    public class GetAllUserPostsModel : IRequest<BaseResponse<List<GetAllUserPostsDto>>>
+    public class GetAllUserPostsModel : IRequest<BaseResponse<List<GetPostDto>>>
     {
         public string UserId { get; set; }
         public string? AuthorizeEmail { get; set; }
     }
 
-    public class GetAllUserPostsHandler : BaseResponseHandler, IRequestHandler<GetAllUserPostsModel, BaseResponse<List<GetAllUserPostsDto>>>
+    public class GetAllUserPostsHandler : BaseResponseHandler, IRequestHandler<GetAllUserPostsModel, BaseResponse<List<GetPostDto>>>
     {
         private readonly HandiMakerDbContext _handiMakerDb;
         private readonly UserManager<AppUser> _userManager;
@@ -38,17 +38,17 @@ namespace HandiMaker.Core.Feature.Post.Query
             this._userManager = userManager;
         }
 
-        public async Task<BaseResponse<List<GetAllUserPostsDto>>> Handle(GetAllUserPostsModel request, CancellationToken cancellationToken)
+        public async Task<BaseResponse<List<GetPostDto>>> Handle(GetAllUserPostsModel request, CancellationToken cancellationToken)
         {
             var user = await _userManager.FindByIdAsync(request.UserId);
             if (user == null)
-                return Failed<List<GetAllUserPostsDto>>(HttpStatusCode.NotFound, "User not found");
+                return Failed<List<GetPostDto>>(HttpStatusCode.NotFound, "User not found");
 
             var AuthorizedUser = await _userManager.FindByEmailAsync(request.AuthorizeEmail ?? "");
 
             var PostsQ = _handiMakerDb.Posts.Where(P => P.PostOwnerId == user.Id)
                 .Include(P => P.ReactedUsers).Include(P => P.Comments).Include(P => P.PostOwner).Include(P => P.postPictures);
-            var posts = await PostsQ.Select(P => new GetAllUserPostsDto
+            var posts = await PostsQ.Select(P => new GetPostDto
             {
                 PostId = P.Id,
                 FirstName = user.FirstName,

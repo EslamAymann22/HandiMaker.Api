@@ -43,11 +43,17 @@ namespace HandiMaker.Api.Controllers
         }
 
         [HttpGet("GetAllUserPosts")]
-        public async Task<ActionResult<BaseResponse<List<GetAllUserPostsDto>>>> GetAllUserPosts([FromQuery] GetAllUserPostsModel model)
+        public async Task<ActionResult<BaseResponse<List<GetPostDto>>>> GetAllUserPosts([FromQuery] GetAllUserPostsModel model)
         {
             model.AuthorizeEmail = User.FindFirstValue(ClaimTypes.Email);
             return BaseOk(await _mediator.Send(model));
+        }
 
+        [HttpGet("GetPostById")]
+        public async Task<ActionResult<BaseResponse<GetPostDto>>> GetPostById([FromQuery] GetPostByIdModel model)
+        {
+            model.AuthorizeEmail = User.FindFirstValue(ClaimTypes.Email);
+            return BaseOk(await _mediator.Send(model));
         }
     }
 }

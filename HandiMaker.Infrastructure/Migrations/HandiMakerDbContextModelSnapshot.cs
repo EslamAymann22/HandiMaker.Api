@@ -156,7 +156,7 @@ namespace HandiMaker.Infrastructure.Migrations
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
 
-                    b.Property<int?>("NumOfChildren")
+                    b.Property<int>("NumOfChildren")
                         .HasColumnType("int");
 
                     b.Property<int?>("ParentId")

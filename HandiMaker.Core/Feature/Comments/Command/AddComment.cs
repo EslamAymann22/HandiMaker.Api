@@ -31,7 +31,7 @@ namespace HandiMaker.Core.Feature.Comments.Command
             var user = await _userManager.FindByEmailAsync(request.AuthorizeEmail ?? "");
             if (user is null)
                 return Failed<string>(HttpStatusCode.Unauthorized);
-            var post = _handiMakerDb.Posts.FirstOrDefaultAsync(P => P.Id == request.PostId);
+            var post = await _handiMakerDb.Posts.FirstOrDefaultAsync(P => P.Id == request.PostId);
             if (post is null)
                 return Failed<string>(HttpStatusCode.NotFound, "this post is not found");
             var NewComment = new Comment

@@ -18,7 +18,7 @@ namespace HandiMaker.Data.Entities
         public Comment? Parent { get; set; }
 
         public List<Comment>? Children { get; set; } = new();
-        public int? NumOfChildren { get; set; } = 0;
+        public int NumOfChildren { get; set; } = 0;
 
     }
 }
