@@ -1,4 +1,5 @@
-﻿using HandiMaker.Data.Entities.PostClasses;
+﻿using HandiMaker.Data.Entities.ChatClasses;
+using HandiMaker.Data.Entities.PostClasses;
 using HandiMaker.Data.Entities.ProductClasses;
 using HandiMaker.Data.Entities.UserClassese;
 using HandiMaker.Data.Enums;
@@ -32,6 +33,8 @@ namespace HandiMaker.Data.Entities
 
         public List<UserFollow>? Followers { get; set; }
         public List<UserFollow>? Following { get; set; }
+
+        public List<Chat>? Chats { get; set; } = new();///////ConfigDone
 
     }
 }

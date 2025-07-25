@@ -20,4 +20,9 @@
     <ProjectReference Include="..\HandiMaker.Services\HandiMaker.Services.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Feature\Chats\Command\" />
+    <Folder Include="Feature\Chats\Query\" />
+  </ItemGroup>
+
 </Project>

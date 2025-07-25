@@ -1141,6 +1141,7 @@
       },
       "HandiMaker.Data/1.0.0": {
         "dependencies": {
+          "Microsoft.AspNetCore.Http.Abstractions": "2.3.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "8.0.17"
         },
         "runtime": {

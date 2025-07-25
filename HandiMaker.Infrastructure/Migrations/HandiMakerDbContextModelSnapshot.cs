@@ -138,6 +138,71 @@ namespace HandiMaker.Infrastructure.Migrations
                     b.ToTable("AspNetUsers", (string)null);
                 });
 
+            modelBuilder.Entity("HandiMaker.Data.Entities.ChatClasses.Chat", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("AppUserId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("FUserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("LastMessage")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("LastMessageDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("LastUserSenderId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("NumberOfBendingMessages")
+                        .HasColumnType("int");
+
+                    b.Property<string>("SUserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AppUserId");
+
+                    b.HasIndex("FUserId");
+
+                    b.HasIndex("SUserId");
+
+                    b.ToTable("Chat");
+                });
+
+            modelBuilder.Entity("HandiMaker.Data.Entities.ChatClasses.MessageDocs", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("DocumentUrl")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("MessageId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("MessageId");
+
+                    b.ToTable("MessageDocs");
+                });
+
             modelBuilder.Entity("HandiMaker.Data.Entities.Comment", b =>
                 {
                     b.Property<int>("Id")
@@ -184,14 +249,14 @@ namespace HandiMaker.Infrastructure.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<int>("ChatId")
+                        .HasColumnType("int");
+
                     b.Property<string>("Content")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("CreateAt")
                         .HasColumnType("datetime2");
-
-                    b.Property<string>("DocumentUrl")
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("IsRead")
                         .HasColumnType("bit");
@@ -199,10 +264,15 @@ namespace HandiMaker.Infrastructure.Migrations
                     b.Property<string>("ReceiverId")
                         .HasColumnType("nvarchar(450)");
 
+                    b.Property<DateTime>("SeenAt")
+                        .HasColumnType("datetime2");
+
                     b.Property<string>("SenderId")
                         .HasColumnType("nvarchar(450)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("ChatId");
 
                     b.HasIndex("ReceiverId");
 
@@ -550,6 +620,40 @@ namespace HandiMaker.Infrastructure.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("HandiMaker.Data.Entities.ChatClasses.Chat", b =>
+                {
+                    b.HasOne("HandiMaker.Data.Entities.AppUser", null)
+                        .WithMany("Chats")
+                        .HasForeignKey("AppUserId");
+
+                    b.HasOne("HandiMaker.Data.Entities.AppUser", "FUser")
+                        .WithMany()
+                        .HasForeignKey("FUserId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("HandiMaker.Data.Entities.AppUser", "SUser")
+                        .WithMany()
+                        .HasForeignKey("SUserId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("FUser");
+
+                    b.Navigation("SUser");
+                });
+
+            modelBuilder.Entity("HandiMaker.Data.Entities.ChatClasses.MessageDocs", b =>
+                {
+                    b.HasOne("HandiMaker.Data.Entities.Message", "Message")
+                        .WithMany("MessageDocs")
+                        .HasForeignKey("MessageId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Message");
+                });
+
             modelBuilder.Entity("HandiMaker.Data.Entities.Comment", b =>
                 {
                     b.HasOne("HandiMaker.Data.Entities.AppUser", "CommentOwner")
@@ -576,6 +680,12 @@ namespace HandiMaker.Infrastructure.Migrations
 
             modelBuilder.Entity("HandiMaker.Data.Entities.Message", b =>
                 {
+                    b.HasOne("HandiMaker.Data.Entities.ChatClasses.Chat", "Chat")
+                        .WithMany("Messages")
+                        .HasForeignKey("ChatId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.HasOne("HandiMaker.Data.Entities.AppUser", "Receiver")
                         .WithMany("MessagesReceived")
                         .HasForeignKey("ReceiverId")
@@ -585,6 +695,8 @@ namespace HandiMaker.Infrastructure.Migrations
                         .WithMany("MessagesSent")
                         .HasForeignKey("SenderId")
                         .OnDelete(DeleteBehavior.Restrict);
+
+                    b.Navigation("Chat");
 
                     b.Navigation("Receiver");
 
@@ -726,6 +838,8 @@ namespace HandiMaker.Infrastructure.Migrations
 
             modelBuilder.Entity("HandiMaker.Data.Entities.AppUser", b =>
                 {
+                    b.Navigation("Chats");
+
                     b.Navigation("CreatedComments");
 
                     b.Navigation("CreatedPosts");
@@ -743,9 +857,19 @@ namespace HandiMaker.Infrastructure.Migrations
                     b.Navigation("Products");
                 });
 
+            modelBuilder.Entity("HandiMaker.Data.Entities.ChatClasses.Chat", b =>
+                {
+                    b.Navigation("Messages");
+                });
+
             modelBuilder.Entity("HandiMaker.Data.Entities.Comment", b =>
                 {
                     b.Navigation("Children");
+                });
+
+            modelBuilder.Entity("HandiMaker.Data.Entities.Message", b =>
+                {
+                    b.Navigation("MessageDocs");
                 });
 
             modelBuilder.Entity("HandiMaker.Data.Entities.PostClasses.Post", b =>
