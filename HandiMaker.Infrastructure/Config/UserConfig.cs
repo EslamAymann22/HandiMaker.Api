@@ -40,18 +40,6 @@ namespace HandiMaker.Infrastructure.Config
             builder.HasMany(U => U.FavProducts)
                 .WithMany(P => P.FavAt);
 
-            //Messages
-            builder.HasMany(U => U.MessagesSent)
-                .WithOne(N => N.Sender)
-                .HasForeignKey(N => N.SenderId)
-                .OnDelete(DeleteBehavior.Restrict);
-
-            builder.HasMany(U => U.MessagesReceived)
-                .WithOne(N => N.Receiver)
-                .HasForeignKey(N => N.ReceiverId)
-                .OnDelete(DeleteBehavior.Restrict);
-
-
         }
     }
 }

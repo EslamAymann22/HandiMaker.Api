@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace HandiMaker.Infrastructure.Migrations
 {
     [DbContext(typeof(HandiMakerDbContext))]
-    [Migration("20250709220451_Init")]
-    partial class Init
+    [Migration("20250902210745_init")]
+    partial class init
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -159,6 +159,9 @@ namespace HandiMaker.Infrastructure.Migrations
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
 
+                    b.Property<int>("NumOfChildren")
+                        .HasColumnType("int");
+
                     b.Property<int?>("ParentId")
                         .HasColumnType("int");
 
@@ -174,41 +177,6 @@ namespace HandiMaker.Infrastructure.Migrations
                     b.HasIndex("PostId");
 
                     b.ToTable("Comments");
-                });
-
-            modelBuilder.Entity("HandiMaker.Data.Entities.Message", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("Content")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime>("CreateAt")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("DocumentUrl")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("IsRead")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("ReceiverId")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("SenderId")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("ReceiverId");
-
-                    b.HasIndex("SenderId");
-
-                    b.ToTable("Messages");
                 });
 
             modelBuilder.Entity("HandiMaker.Data.Entities.Notification", b =>
@@ -228,6 +196,15 @@ namespace HandiMaker.Infrastructure.Migrations
 
                     b.Property<DateTime>("NoteAt")
                         .HasColumnType("datetime2");
+
+                    b.Property<int>("NotifiType")
+                        .HasColumnType("int");
+
+                    b.Property<string>("NotifiedUserId")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("RouteLink")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("UserId")
                         .HasColumnType("nvarchar(450)");
@@ -574,23 +551,6 @@ namespace HandiMaker.Infrastructure.Migrations
                     b.Navigation("Post");
                 });
 
-            modelBuilder.Entity("HandiMaker.Data.Entities.Message", b =>
-                {
-                    b.HasOne("HandiMaker.Data.Entities.AppUser", "Receiver")
-                        .WithMany("MessagesReceived")
-                        .HasForeignKey("ReceiverId")
-                        .OnDelete(DeleteBehavior.Restrict);
-
-                    b.HasOne("HandiMaker.Data.Entities.AppUser", "Sender")
-                        .WithMany("MessagesSent")
-                        .HasForeignKey("SenderId")
-                        .OnDelete(DeleteBehavior.Restrict);
-
-                    b.Navigation("Receiver");
-
-                    b.Navigation("Sender");
-                });
-
             modelBuilder.Entity("HandiMaker.Data.Entities.Notification", b =>
                 {
                     b.HasOne("HandiMaker.Data.Entities.AppUser", "User")
@@ -733,10 +693,6 @@ namespace HandiMaker.Infrastructure.Migrations
                     b.Navigation("Followers");
 
                     b.Navigation("Following");
-
-                    b.Navigation("MessagesReceived");
-
-                    b.Navigation("MessagesSent");
 
                     b.Navigation("Notifications");
 

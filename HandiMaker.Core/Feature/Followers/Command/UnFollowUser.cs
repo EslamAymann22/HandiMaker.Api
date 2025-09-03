@@ -26,6 +26,9 @@ namespace HandiMaker.Core.Feature.Followers.Command
             var UnFollowedUser = await _handiMakerDb.Users.FirstOrDefaultAsync(U => U.Id == request.UnFollowedUserId);
             var RequestUser = await _handiMakerDb.Users.FirstOrDefaultAsync(U => U.Email == request.RequestUserEmail);
 
+            if (UnFollowedUser is null)
+                return Failed<string>(HttpStatusCode.NotFound, "UnFollowed User Not Found");
+
             var IsFollowed = await _handiMakerDb.UserFollows
                 .FirstOrDefaultAsync(UF => UF.FollowerId == RequestUser.Id && UF.FollowedId == request.UnFollowedUserId);
 

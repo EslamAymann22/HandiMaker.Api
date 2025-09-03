@@ -53,14 +53,14 @@ namespace HandiMaker.Api
 
                 await DbContext.Database.MigrateAsync();
 
-                using (var scope = app.Services.CreateScope())
-                {
-                    var _Fas7nyDbContext = scope.ServiceProvider.GetRequiredService<HandiMakerDbContext>();
-                    var _userManager = scope.ServiceProvider.GetRequiredService<UserManager<AppUser>>();
-                    var _RoleManager = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
+                //using (var scope = app.Services.CreateScope())
+                //{
+                //    var _Fas7nyDbContext = scope.ServiceProvider.GetRequiredService<HandiMakerDbContext>();
+                //    var _userManager = scope.ServiceProvider.GetRequiredService<UserManager<AppUser>>();
+                //    var _RoleManager = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
 
-                    //await StoreContextSeeding.AddAllSeedingData(_RoleManager, _userManager, _Fas7nyDbContext);
-                }
+                //    //await StoreContextSeeding.AddAllSeedingData(_RoleManager, _userManager, _Fas7nyDbContext);
+                //}
 
             }
             catch (Exception ex)

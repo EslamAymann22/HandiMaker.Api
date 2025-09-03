@@ -1,8 +1,10 @@
 ﻿using HandiMaker.Core.ResponseBase.GeneralResponse;
 using HandiMaker.Data.Entities.UserClassese;
 using HandiMaker.Infrastructure.DbContextData;
+using HandiMaker.Services.Services.Interface;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using System.Net;
 
 namespace HandiMaker.Core.Feature.Followers.Command
@@ -17,10 +19,16 @@ namespace HandiMaker.Core.Feature.Followers.Command
     public class FollowUserHandler : BaseResponseHandler, IRequestHandler<FollowUserModel, BaseResponse<string>>
     {
         private readonly HandiMakerDbContext _handiMakerDb;
+        private readonly IConfiguration _configuration;
+        private readonly INotificationServices _notificationServices;
 
-        public FollowUserHandler(HandiMakerDbContext handiMakerDb)
+        public FollowUserHandler(HandiMakerDbContext handiMakerDb
+            , IConfiguration configuration
+            , INotificationServices notificationServices)
         {
             _handiMakerDb = handiMakerDb;
+            this._configuration = configuration;
+            this._notificationServices = notificationServices;
         }
         public async Task<BaseResponse<string>> Handle(FollowUserModel request, CancellationToken cancellationToken)
         {
@@ -48,6 +56,19 @@ namespace HandiMaker.Core.Feature.Followers.Command
 
             await _handiMakerDb.SaveChangesAsync(cancellationToken);
 
+            try
+            {
+                var RouteLink = $"{_configuration["BaseUrl"]}/api/Account/GetUserById?UserId={RequestUser.Id}";
+                await _notificationServices.SendNotificationAsync(RequestUser,
+                    $"{RequestUser.FirstName + " " + RequestUser.LastName} started following you.",
+                    FollowedUser.Id,
+                    RouteLink);
+            }
+            catch (Exception ex)
+            {
+                var Error = ex.Message;
+                return Success($"{RequestUser.UserName} follow {FollowedUser.UserName} Now!, But Notification Not Sent =>\n\n{Error}");
+            }
             return Success($"{RequestUser.UserName} follow {FollowedUser.UserName} Now!");
 
 

@@ -1,9 +1,11 @@
 ﻿using HandiMaker.Core.ResponseBase.GeneralResponse;
 using HandiMaker.Data.Entities;
 using HandiMaker.Infrastructure.DbContextData;
+using HandiMaker.Services.Services.Interface;
 using MediatR;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using System.Net;
 
 namespace HandiMaker.Core.Feature.Comments.Command
@@ -20,11 +22,18 @@ namespace HandiMaker.Core.Feature.Comments.Command
     {
         private readonly UserManager<AppUser> _userManager;
         private readonly HandiMakerDbContext _handiMakerDb;
+        private readonly IConfiguration _configuration;
+        private readonly INotificationServices _notificationServices;
 
-        public AddCommentHandler(UserManager<AppUser> userManager, HandiMakerDbContext handiMakerDb)
+        public AddCommentHandler(UserManager<AppUser> userManager
+            , HandiMakerDbContext handiMakerDb
+            , IConfiguration configuration
+            , INotificationServices notificationServices)
         {
             this._userManager = userManager;
             this._handiMakerDb = handiMakerDb;
+            this._configuration = configuration;
+            this._notificationServices = notificationServices;
         }
         public async Task<BaseResponse<string>> Handle(AddCommentModel request, CancellationToken cancellationToken)
         {
@@ -53,12 +62,21 @@ namespace HandiMaker.Core.Feature.Comments.Command
                     _handiMakerDb.Comments.Update(parent);
                 }
                 await _handiMakerDb.SaveChangesAsync(cancellationToken);
-                return Success("Comment Added!");
+
+                if (post.PostOwnerId != user.Id)
+                {
+
+                    await _notificationServices.SendNotificationAsync(user,
+                        $"{user.FirstName + " " + user.LastName} add comment in your post \n {NewComment.Content}",
+                        post.PostOwnerId, $"{_configuration["BaseUrl"]}/api/Post/GetPostById?postId={post.Id}");
+
+                }
             }
             catch (Exception ex)
             {
                 return Failed<string>(HttpStatusCode.InternalServerError, ex.Message);
             }
+            return Success("Comment Added!");
         }
     }
 

@@ -27,9 +27,6 @@ namespace HandiMaker.Data.Entities
         public List<Product>? Products { get; set; }///////ConfigDone
         public List<Product>? FavProducts { get; set; }///////ConfigDone
 
-        public List<Message>? MessagesSent { get; set; }///////ConfigDone
-        public List<Message>? MessagesReceived { get; set; }///////ConfigDone
-
         public List<UserFollow>? Followers { get; set; }
         public List<UserFollow>? Following { get; set; }
 

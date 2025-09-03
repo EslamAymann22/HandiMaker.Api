@@ -18,7 +18,6 @@ namespace HandiMaker.Infrastructure.DbContextData
         public DbSet<ProductPicture> ProductPictures { get; set; }
         public DbSet<UserFollow> UserFollows { get; set; }
         public DbSet<Comment> Comments { get; set; }
-        public DbSet<Message> Messages { get; set; }
         public DbSet<Notification> Notifications { get; set; }
 
 

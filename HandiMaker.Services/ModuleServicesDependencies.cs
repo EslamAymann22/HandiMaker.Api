@@ -17,6 +17,7 @@ namespace HandiMaker.Services
             Service.AddScoped<IEmailService, EmailService>();
             Service.AddScoped<ICacheServices, CacheServices>();
             Service.AddScoped<IResetPasswordServices, ResetPasswordServices>();
+            Service.AddScoped<INotificationServices, NotificationServices>();
 
             var emailsettings = new EmailSettings();
             configuration.GetSection(nameof(EmailSettings)).Bind(emailsettings);
