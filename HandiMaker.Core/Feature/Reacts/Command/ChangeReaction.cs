@@ -1,4 +1,5 @@
 ﻿using HandiMaker.Core.ResponseBase.GeneralResponse;
+using HandiMaker.Data.Enums;
 using HandiMaker.Infrastructure.DbContextData;
 using HandiMaker.Services.Services.Interface;
 using MediatR;
@@ -54,7 +55,8 @@ namespace HandiMaker.Core.Feature.Reacts.Command
 
                     await _notificationServices.SendNotificationAsync(AuthorizedUser,
                         $"{AuthorizedUser.FirstName + " " + AuthorizedUser.LastName} and {(Post.ReactedUsers.Count > 1 ? (Post.ReactedUsers.Count - 1 + " other ") : "")} React in your post \n {Post.Content ?? ""}",
-                    Post.PostOwnerId, $"{_configuration["BaseUrl"]}/api/Post/GetPostById?postId={Post.Id}");
+                    Post.PostOwnerId, $"{_configuration["BaseUrl"]}/api/Post/GetPostById?postId={Post.Id}"
+                    , NotifiType.NewLike);
                 }
 
             }

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("HandiMaker.Services")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+77435fb10422ee7687580ad00f7a06867b6c2215")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fa87d5795ee0fbc464ae2be471247eae3c5b133f")]
 [assembly: System.Reflection.AssemblyProductAttribute("HandiMaker.Services")]
 [assembly: System.Reflection.AssemblyTitleAttribute("HandiMaker.Services")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

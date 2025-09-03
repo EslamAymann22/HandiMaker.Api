@@ -1,5 +1,6 @@
 ﻿using HandiMaker.Core.ResponseBase.GeneralResponse;
 using HandiMaker.Data.Entities;
+using HandiMaker.Data.Enums;
 using HandiMaker.Infrastructure.DbContextData;
 using HandiMaker.Services.Services.Interface;
 using MediatR;
@@ -68,7 +69,8 @@ namespace HandiMaker.Core.Feature.Comments.Command
 
                     await _notificationServices.SendNotificationAsync(user,
                         $"{user.FirstName + " " + user.LastName} add comment in your post \n {NewComment.Content}",
-                        post.PostOwnerId, $"{_configuration["BaseUrl"]}/api/Post/GetPostById?postId={post.Id}");
+                        post.PostOwnerId, $"{_configuration["BaseUrl"]}/api/Post/GetPostById?postId={post.Id}"
+                        , NotifiType.NewComment);
 
                 }
             }

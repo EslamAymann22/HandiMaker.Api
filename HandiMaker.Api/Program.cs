@@ -3,6 +3,7 @@ using Fas7niApp.Infrastructure;
 using HandiMaker.Core;
 using HandiMaker.Data.Entities;
 using HandiMaker.Infrastructure.DbContextData;
+using HandiMaker.Infrastructure.Hubs;
 using HandiMaker.Services;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -21,7 +22,7 @@ namespace HandiMaker.Api
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
-
+            builder.Services.AddSignalR();
             builder.Services.AddDbContext<HandiMakerDbContext>(Options =>
             {
                 Options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
@@ -85,7 +86,7 @@ namespace HandiMaker.Api
 
 
             app.MapControllers();
-
+            app.MapHub<MyHub>("/MyHub");
             app.Run();
         }
     }

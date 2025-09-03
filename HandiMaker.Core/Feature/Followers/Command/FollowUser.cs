@@ -1,5 +1,6 @@
 ﻿using HandiMaker.Core.ResponseBase.GeneralResponse;
 using HandiMaker.Data.Entities.UserClassese;
+using HandiMaker.Data.Enums;
 using HandiMaker.Infrastructure.DbContextData;
 using HandiMaker.Services.Services.Interface;
 using MediatR;
@@ -62,7 +63,7 @@ namespace HandiMaker.Core.Feature.Followers.Command
                 await _notificationServices.SendNotificationAsync(RequestUser,
                     $"{RequestUser.FirstName + " " + RequestUser.LastName} started following you.",
                     FollowedUser.Id,
-                    RouteLink);
+                    RouteLink, NotifiType.NewFollower);
             }
             catch (Exception ex)
             {
