@@ -30,5 +30,10 @@ namespace HandiMaker.Data.Entities
         public List<UserFollow>? Followers { get; set; }
         public List<UserFollow>? Following { get; set; }
 
+        //public ICollection<Chat>? UserChats { get; set; } = new HashSet<Chat>();
+        public ICollection<Message>? Messages { get; set; } = new HashSet<Message>();
+
+        public ICollection<Connection>? Connections { get; set; } = new HashSet<Connection>();
+
     }
 }

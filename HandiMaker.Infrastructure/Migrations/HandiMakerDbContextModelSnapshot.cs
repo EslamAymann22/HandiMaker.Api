@@ -138,6 +138,41 @@ namespace HandiMaker.Infrastructure.Migrations
                     b.ToTable("AspNetUsers", (string)null);
                 });
 
+            modelBuilder.Entity("HandiMaker.Data.Entities.Chat", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("FUserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<int?>("LastMessageId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("NumberOfMessagesUnseen")
+                        .HasColumnType("int");
+
+                    b.Property<string>("SUserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("FUserId");
+
+                    b.HasIndex("LastMessageId")
+                        .IsUnique()
+                        .HasFilter("[LastMessageId] IS NOT NULL");
+
+                    b.HasIndex("SUserId");
+
+                    b.ToTable("Chats");
+                });
+
             modelBuilder.Entity("HandiMaker.Data.Entities.Comment", b =>
                 {
                     b.Property<int>("Id")
@@ -174,6 +209,68 @@ namespace HandiMaker.Infrastructure.Migrations
                     b.HasIndex("PostId");
 
                     b.ToTable("Comments");
+                });
+
+            modelBuilder.Entity("HandiMaker.Data.Entities.Connection", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("ConnectionId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Connections");
+                });
+
+            modelBuilder.Entity("HandiMaker.Data.Entities.Message", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("ChatId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Content")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreateAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("FileUrl")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("HasFile")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsSeen")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ChatId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Messages");
                 });
 
             modelBuilder.Entity("HandiMaker.Data.Entities.Notification", b =>
@@ -524,6 +621,31 @@ namespace HandiMaker.Infrastructure.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("HandiMaker.Data.Entities.Chat", b =>
+                {
+                    b.HasOne("HandiMaker.Data.Entities.AppUser", "FUser")
+                        .WithMany()
+                        .HasForeignKey("FUserId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("HandiMaker.Data.Entities.Message", "LastMessage")
+                        .WithOne()
+                        .HasForeignKey("HandiMaker.Data.Entities.Chat", "LastMessageId");
+
+                    b.HasOne("HandiMaker.Data.Entities.AppUser", "SUser")
+                        .WithMany()
+                        .HasForeignKey("SUserId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("FUser");
+
+                    b.Navigation("LastMessage");
+
+                    b.Navigation("SUser");
+                });
+
             modelBuilder.Entity("HandiMaker.Data.Entities.Comment", b =>
                 {
                     b.HasOne("HandiMaker.Data.Entities.AppUser", "CommentOwner")
@@ -546,6 +668,36 @@ namespace HandiMaker.Infrastructure.Migrations
                     b.Navigation("Parent");
 
                     b.Navigation("Post");
+                });
+
+            modelBuilder.Entity("HandiMaker.Data.Entities.Connection", b =>
+                {
+                    b.HasOne("HandiMaker.Data.Entities.AppUser", "User")
+                        .WithMany("Connections")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("HandiMaker.Data.Entities.Message", b =>
+                {
+                    b.HasOne("HandiMaker.Data.Entities.Chat", "Chat")
+                        .WithMany("Messages")
+                        .HasForeignKey("ChatId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("HandiMaker.Data.Entities.AppUser", "User")
+                        .WithMany("Messages")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Chat");
+
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("HandiMaker.Data.Entities.Notification", b =>
@@ -683,6 +835,8 @@ namespace HandiMaker.Infrastructure.Migrations
 
             modelBuilder.Entity("HandiMaker.Data.Entities.AppUser", b =>
                 {
+                    b.Navigation("Connections");
+
                     b.Navigation("CreatedComments");
 
                     b.Navigation("CreatedPosts");
@@ -691,9 +845,16 @@ namespace HandiMaker.Infrastructure.Migrations
 
                     b.Navigation("Following");
 
+                    b.Navigation("Messages");
+
                     b.Navigation("Notifications");
 
                     b.Navigation("Products");
+                });
+
+            modelBuilder.Entity("HandiMaker.Data.Entities.Chat", b =>
+                {
+                    b.Navigation("Messages");
                 });
 
             modelBuilder.Entity("HandiMaker.Data.Entities.Comment", b =>

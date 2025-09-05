@@ -5,7 +5,6 @@ using HandiMaker.Infrastructure.DbContextData;
 using HandiMaker.Services.Services.Interface;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
 using System.Net;
 
 namespace HandiMaker.Core.Feature.Followers.Command
@@ -20,21 +19,19 @@ namespace HandiMaker.Core.Feature.Followers.Command
     public class FollowUserHandler : BaseResponseHandler, IRequestHandler<FollowUserModel, BaseResponse<string>>
     {
         private readonly HandiMakerDbContext _handiMakerDb;
-        private readonly IConfiguration _configuration;
         private readonly INotificationServices _notificationServices;
 
         public FollowUserHandler(HandiMakerDbContext handiMakerDb
-            , IConfiguration configuration
             , INotificationServices notificationServices)
         {
             _handiMakerDb = handiMakerDb;
-            this._configuration = configuration;
             this._notificationServices = notificationServices;
         }
         public async Task<BaseResponse<string>> Handle(FollowUserModel request, CancellationToken cancellationToken)
         {
             var FollowedUser = await _handiMakerDb.Users.FirstOrDefaultAsync(U => U.Id == request.FollowedUserId);
             var RequestUser = await _handiMakerDb.Users.FirstOrDefaultAsync(U => U.Email == request.RequestUserEmail);
+
             if (FollowedUser is null)
                 return Failed<string>(HttpStatusCode.NotFound, "Followed User Not Found");
             if (RequestUser is null)
@@ -59,11 +56,9 @@ namespace HandiMaker.Core.Feature.Followers.Command
 
             try
             {
-                var RouteLink = $"{_configuration["BaseUrl"]}/api/Account/GetUserById?UserId={RequestUser.Id}";
-                await _notificationServices.SendNotificationAsync(RequestUser,
-                    $"{RequestUser.FirstName + " " + RequestUser.LastName} started following you.",
-                    FollowedUser.Id,
-                    RouteLink, NotifiType.NewFollower);
+                var RouteLink = $"/api/Account/GetUserById?UserId={RequestUser.Id}";
+                var NotifiContent = $"{RequestUser.FirstName + " " + RequestUser.LastName} started following you.";
+                await _notificationServices.SendNotificationAsync(RequestUser, NotifiContent, FollowedUser.Id, RouteLink, NotifiType.NewFollower);
             }
             catch (Exception ex)
             {

@@ -5,7 +5,8 @@
 
         NewFollower,
         NewComment,
-        NewLike
+        NewLike,
+        NewMessage
 
     }
 }

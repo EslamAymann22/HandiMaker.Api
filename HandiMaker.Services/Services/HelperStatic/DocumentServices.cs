@@ -20,7 +20,7 @@ namespace HandiMaker.Services.Services.HelperStatic
 
             var Request = _httpContextAccessor.HttpContext.Request;
             var baseUrl = $"{Request.Scheme}://{Request.Host}";
-            var FileUrl = $"{baseUrl}/Files/{FolderName}/{FileName}";
+            var FileUrl = $"{baseUrl}/{FolderPath}";
 
 
             return FileUrl;

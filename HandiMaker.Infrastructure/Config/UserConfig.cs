@@ -40,6 +40,21 @@ namespace HandiMaker.Infrastructure.Config
             builder.HasMany(U => U.FavProducts)
                 .WithMany(P => P.FavAt);
 
+
+            // Message
+            builder.HasMany(U => U.Messages)
+                .WithOne(M => M.User)
+                .HasForeignKey(M => M.UserId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+
+            // Connection
+            builder.HasMany(U => U.Connections)
+                .WithOne(C => C.User)
+                .HasForeignKey(C => C.UserId)
+                .OnDelete(DeleteBehavior.Cascade);
+
+
         }
     }
 }
